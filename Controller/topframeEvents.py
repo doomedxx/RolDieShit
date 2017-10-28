@@ -16,14 +16,14 @@ def goSettings(event):
 
     View_Settings.theme.t1.addBlock()
     View_Settings.maxtemp.max1.addBlock()
-    View_Settings.mintemp.open1.addBlock()
+    View_Settings.mintemp.min1.addBlock()
     View_Settings.clockSettings.c1.addBlock()
 
 
 def goView(event):
     View_Settings.theme.t1.themeWidget.place_forget()
     View_Settings.maxtemp.max1.closetempWidget.place_forget()
-    View_Settings.mintemp.open1.opentempWidget.place_forget()
+    View_Settings.mintemp.min1.opentempWidget.place_forget()
     View_Settings.clockSettings.c1.clocksettingwidget.place_forget()
 
 
