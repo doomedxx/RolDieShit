@@ -6,6 +6,7 @@ import Controller.maxtemp_controller as controller
 
 
 class closetempsetting(object):
+
     mainframe.widgetList.append("closetemp")
     def __init__(self):
         self.color = "cornsilk4"
@@ -41,6 +42,11 @@ class closetempsetting(object):
         self.maxIncrement.pack()
         self.maxIncrement.place(x=118, y=value.widgetHeight - 80)
         self.maxIncrement.bind("<Button-1>", controller.increaseTempGo)
+
+        self.closetempWarning = Label(self.closetempWidget)
+        self.closetempWarning.config(text="",font=("DIN-bold", 8), bg=self.color, fg="gold")
+        self.closetempWarning.pack()
+        self.closetempWarning.place(x=20, y=value.widgetHeight - 40)
 
         self.minIncrement = Button(self.closetempWidget)
         self.minIncrement.config(text="-",font=("DIN-bold", 13), bg="gray25", fg=value.titleColor, height=-10, width=1)
