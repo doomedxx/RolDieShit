@@ -27,13 +27,13 @@ class themewidget(object):
         self.themeTip.place(x=5, y=28)
 
         self.themeDark = Button(self.themeWidget)
-        self.themeDark.config(text="Dark Theme", font=value.titleFont, bg="gray25", fg=value.titleColor, borderwidth= 1, relief="raised")
+        self.themeDark.config(text="Dark Theme", font=value.titleFont, bg="RoyalBlue1", fg=value.titleColor, borderwidth= 1, relief="raised")
         self.themeDark.bind("<Button-1>", controller.goDark)
         self.themeDark.pack()
         self.themeDark.place(x=15, y=value.widgetHeight - 105, width=120)
 
         self.themeLight = Button(self.themeWidget)
-        self.themeLight.config(text="Light Theme", font=value.titleFont, bg="gray25", fg=value.titleColor, borderwidth= 1, relief="raised")
+        self.themeLight.config(text="Light Theme", font=value.titleFont, bg="RoyalBlue1", fg=value.titleColor, borderwidth= 1, relief="raised")
         self.themeLight.bind("<Button-1>", controller.goLight)
         self.themeLight.pack()
         self.themeLight.place(x=15, y=value.widgetHeight - 55, width=120)

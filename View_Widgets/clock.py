@@ -4,7 +4,6 @@ from tkinter import *
 import Frame.mainframe as mainframe
 import View_Widgets.widgetValues as value
 
-
 class clockwidget(object):
     mainframe.widgetList.append("Clock")
     def __init__(self):

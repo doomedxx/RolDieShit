@@ -9,7 +9,7 @@ class closetempsetting(object):
 
     mainframe.widgetList.append("closetemp")
     def __init__(self):
-        self.color = "cornsilk4"
+        self.color = "purple2"
         self.maxtemp = 23
         self.closetempWidgetPosX = 655
         self.closetempWidgetPosY = 70

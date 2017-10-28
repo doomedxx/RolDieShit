@@ -24,7 +24,6 @@ def decreaseTemp():
 def setWarning(warning):
     max.max1.closetempWarning.config(text=warning)
 
-
 def onEnterScript():
     max.max1.setTooltip("At what temperature should \n the rollucks close?")
 
