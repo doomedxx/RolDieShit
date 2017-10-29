@@ -26,7 +26,7 @@ def goView(event):
     View_Settings.maxtemp.max1.closetempWidget.place_forget()
     View_Settings.mintemp.min1.opentempsetting.place_forget()
     View_Settings.clockSettings.c1.clocksettingwidget.place_forget()
-    View_Settings.officehours.office1.officehours.place_forget()
+    View_Settings.officehours.office1.officesetting.place_forget()
 
 
     View_Widgets.control.replace()

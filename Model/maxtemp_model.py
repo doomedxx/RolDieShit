@@ -1,5 +1,4 @@
 from View_Settings import maxtemp as max
-
 temp = 23
 
 def increaseTemp():
@@ -18,6 +17,8 @@ def decreaseTemp():
         temp-=1
     else:
         setWarning("Lowest temperature \nreached!")
+
+
     max.max1.setTemp(temp)
 
 def setWarning(warning):

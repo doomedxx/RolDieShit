@@ -5,7 +5,7 @@ import View_Settings.settingValues as value
 import Controller.office_controller as controller
 
 
-class officehours(object):
+class officehourssetting(object):
 
     mainframe.widgetList.append("closetemp")
     def __init__(self):
@@ -86,4 +86,4 @@ class officehours(object):
     def setTooltip(self, tip):
         self.officeTip.config(text=tip, font=value.tipFont, bg=self.color, fg=value.tipColor)
 
-office1 = officehours()
+office1 = officehourssetting()
