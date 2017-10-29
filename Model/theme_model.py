@@ -1,7 +1,24 @@
 from View_Settings import theme as theme
+import Frame.mainframe as f
+import threading
+
+color = 20
+
+def lightTransition():
+    global color
+    if color <= 80:
+        threading.Timer(0.000001, lightTransition).start()
+        f.root.configure(background='gray{}'.format(color))
+        color+=3
+
+def darkTransition():
+    global color
+    if color >= 15:
+        threading.Timer(0.000001, darkTransition).start()
+        f.root.configure(background='gray{}'.format(color))
+        color-=3
 
 def onEnterScript():
-    print("Werkt")
     theme.t1.setTooltip("Change the appearance of \n the interface")
 
 def onLeaveScript():

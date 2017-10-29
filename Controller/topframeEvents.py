@@ -14,6 +14,7 @@ def goSettings(event):
     View_Widgets.graph1.g1.graphWidget.place_forget()
     View_Widgets.rollercontrol.r1.rollerWidget.place_forget()
 
+    View_Settings.officehours.office1.addBlock()
     View_Settings.theme.t1.addBlock()
     View_Settings.maxtemp.max1.addBlock()
     View_Settings.mintemp.min1.addBlock()
@@ -23,8 +24,9 @@ def goSettings(event):
 def goView(event):
     View_Settings.theme.t1.themeWidget.place_forget()
     View_Settings.maxtemp.max1.closetempWidget.place_forget()
-    View_Settings.mintemp.min1.opentempWidget.place_forget()
+    View_Settings.mintemp.min1.opentempsetting.place_forget()
     View_Settings.clockSettings.c1.clocksettingwidget.place_forget()
+    View_Settings.officehours.office1.officehours.place_forget()
 
 
     View_Widgets.control.replace()

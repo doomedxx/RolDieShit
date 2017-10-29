@@ -10,6 +10,7 @@ import View_Widgets.clock as clock
 import View_Settings.theme as theme
 import View_Settings.maxtemp as max
 import View_Settings.mintemp as min
+import View_Settings.officehours as office
 import View_Settings.clockSettings as clocksettings
 import Model.maxtemp_model as tempModel
 import Controller.clock_controller as clockcontrol

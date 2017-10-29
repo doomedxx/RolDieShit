@@ -12,4 +12,4 @@ titlefont = ("DIN-bold", 13)
 indicatorColor = 'white'       ## Change information font color
 informationFont = ("DIN-bold", 42)
 informationHeight = 3
-font = "placeholder"
+font = "DIN-bold"

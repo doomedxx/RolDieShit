@@ -4,8 +4,7 @@ temp = 23
 
 def increaseTemp():
     global temp
-    print(temp)
-    if temp >= 18 and temp <= 35:
+    if temp >= 14 and temp <= 35:
         setWarning("")
         temp+=1
     else:
@@ -14,7 +13,7 @@ def increaseTemp():
 
 def decreaseTemp():
     global temp
-    if temp >= 19 and temp <= 36:
+    if temp >= 15 and temp <= 36:
         setWarning("")
         temp-=1
     else:
