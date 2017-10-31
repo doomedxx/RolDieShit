@@ -1,0 +1,84 @@
+#include <avr/io.h>
+#include <stdint.h>
+#include <util/delay.h>
+#include <avr/interrupt.h>
+#include <stdbool.h>
+#define BLINK_DELAY_MS 200
+float D_LIGHTTHRESHOLD;
+ 
+int main (void)
+{
+  eeprom_init(); // Load eeprom to ram, or initialize eeprom
+  port_init(); // Initialize port data registers
+  adc_init(); // Initialize ADC
+ 
+ while(1) {
+
+  float light = getLight();
+  
+  if (light < 40)
+  {
+    PORTB |= _BV(PORTB5);         //rode led knippert bij weinig licht
+    _delay_ms(BLINK_DELAY_MS);
+  }
+  else if(light > 40 && light <=50)
+  {
+    PORTB |= _BV(PORTB4);         //gele led knippert bij normaal licht
+    _delay_ms(BLINK_DELAY_MS);
+  }
+  else if(light >50)
+  {
+    PORTB |= _BV(PORTB3);         //groene led knippert bij veel licht
+    _delay_ms(BLINK_DELAY_MS);
+  }
+   
+  /* set pin 3,4,5 low to turn led off */
+  PORTB &= ~_BV(PORTB5);
+  PORTB &= ~_BV(PORTB4);
+  PORTB &= ~_BV(PORTB3);
+  _delay_ms(BLINK_DELAY_MS);
+
+ }
+}
+
+float getLight(void)
+{
+  ADMUX |= _BV(MUX0); // Set channel point to port 1
+  ADCSRA |= _BV(ADSC); // Start adc measurement
+  loop_until_bit_is_clear(ADCSRA, ADSC);  // proceed when done
+
+  float vol = (float)ADCW / 1024 * 100;
+  return vol;
+}
+
+void setlightthreshold(float light)
+{
+  D_LIGHTTHRESHOLD = light;
+  eeprom_write_float((float*)0x05, light);
+}
+
+void eeprom_init(){
+  // Checks  if eeprom is already set, if true load the values in ram, otherwise reset to default
+  if (eeprom_read_byte((uint8_t*)0x00) != (uint8_t)0x01){
+    // Set light threshold
+    eeprom_write_float((float*)0x05, 80);
+  }
+  // Load the values into ram
+  D_LIGHTTHRESHOLD = eeprom_read_float((float*)0x05);
+}
+
+void port_init(void){
+  DDRC &= ~_BV(DDC0); // Analog pin 0 input Light
+   /* set pin 3,4,5 of PORTB for output*/
+ DDRB |= _BV(DDB5);   //rode led
+ DDRB |= _BV(DDB4);   //gele led
+ DDRB |= _BV(DDB3);   //groene led
+
+}
+
+void adc_init(void){
+  ADCSRA |= _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0); // 128 prescaler
+  ADMUX |= _BV(REFS0);
+  ADMUX &= ~_BV(REFS1); // 5v mode
+  ADCSRA |= _BV(ADEN); // Turn on
+}
