@@ -20,17 +20,17 @@ class clockwidget(object):
         self.clockLabelTime = Label(self.clockWidget, text="10:35PM")
         self.clockLabelTime.config(font=("DIN-bold", 20), bg=self.color, fg=value.indicatorColor)
         self.clockLabelTime.pack()
-        self.clockLabelTime.place(x=8, y=53)
+        self.clockLabelTime.place(x=2, y=53)
 
         self.clockLabelDay = Label(self.clockWidget, text="")
         self.clockLabelDay.config(font=("DIN-bold", 20), bg=self.color, fg=value.indicatorColor)
         self.clockLabelDay.pack()
-        self.clockLabelDay.place(x=8, y=25)
+        self.clockLabelDay.place(x=2, y=25)
 
         self.clockLabel = Label(self.clockWidget)
         self.clockLabel.config(text="TIME",font=value.titlefont, bg=self.color, fg=value.titleColor)
         self.clockLabel.pack()
-        self.clockLabel.place(x=5, y=1)
+        self.clockLabel.place(x=2, y=1)
 
         self.clockWidget.pack(side=LEFT)
         self.clockWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=self.clockWidgetPosX, y=self.clockWidgetPosY)

@@ -20,46 +20,46 @@ class officehourssetting(object):
         self.officeOpenValue = Label(self.officesetting)
         self.officeOpenValue.config(text="08:00", font=("DIN", 15), bg=self.color, fg=value.titleColor)
         self.officeOpenValue.pack()
-        self.officeOpenValue.place(x=42, y=value.widgetHeight - 105)
+        self.officeOpenValue.place(x=47, y=value.widgetHeight - 105)
 
         self.officeOpen = Label(self.officesetting)
         self.officeOpen.config(text="OPEN:", font=value.titleFont, bg=self.color, fg=value.titleColor)
         self.officeOpen.pack()
-        self.officeOpen.place(x=12, y=value.widgetHeight - 125)
+        self.officeOpen.place(x=45, y=value.widgetHeight - 125)
 
         self.incOpen = Button(self.officesetting)
-        self.incOpen.config(text="+",font=("DIN-bold", 8), bg="gray25", fg=value.titleColor, height=-50, width=1)
+        self.incOpen.config(text="+",font=("DIN-bold", 8), bg="dark goldenrod", fg=value.titleColor, height=-50, width=1)
         self.incOpen.pack()
-        self.incOpen.place(x=100, y=value.widgetHeight - 100)
+        self.incOpen.place(x=105, y=value.widgetHeight - 100)
         self.incOpen.bind("<Button-1>", controller.increaseOpenTime)
 
         self.decOpen = Button(self.officesetting)
-        self.decOpen.config(text="-",font=("DIN-bold", 8), bg="gray25", fg=value.titleColor, height=-50, width=1)
+        self.decOpen.config(text="-",font=("DIN-bold", 8), bg="dark goldenrod", fg=value.titleColor, height=-50, width=1)
         self.decOpen.pack()
-        self.decOpen.place(x=20, y=value.widgetHeight - 100)
+        self.decOpen.place(x=25, y=value.widgetHeight - 100)
         self.decOpen.bind("<Button-1>", controller.decreaseOpenTime)
 
         self.incClose = Button(self.officesetting)
-        self.incClose.config(text="+",font=("DIN-bold", 8), bg="gray25", fg=value.titleColor, height=-50, width=1)
+        self.incClose.config(text="+",font=("DIN-bold", 8), bg="dark goldenrod", fg=value.titleColor, height=-50, width=1)
         self.incClose.pack()
-        self.incClose.place(x=100, y=value.widgetHeight - 48)
+        self.incClose.place(x=105, y=value.widgetHeight - 48)
         self.incClose.bind("<Button-1>", controller.increaseCloseTime)
 
         self.decClose = Button(self.officesetting)
-        self.decClose.config(text="-",font=("DIN-bold", 8), bg="gray25", fg=value.titleColor, height=-50, width=1)
+        self.decClose.config(text="-",font=("DIN-bold", 8), bg="dark goldenrod", fg=value.titleColor, height=-50, width=1)
         self.decClose.pack()
-        self.decClose.place(x=20, y=value.widgetHeight - 48)
+        self.decClose.place(x=25, y=value.widgetHeight - 48)
         self.decClose.bind("<Button-1>", controller.decreaseCloseTime)
 
         self.officeCloseValue = Label(self.officesetting)
         self.officeCloseValue.config(text="17:00", font=("DIN", 15), bg=self.color, fg=value.titleColor)
         self.officeCloseValue.pack()
-        self.officeCloseValue.place(x=42, y=value.widgetHeight - 54)
+        self.officeCloseValue.place(x=47, y=value.widgetHeight - 54)
 
         self.officeClose = Label(self.officesetting)
         self.officeClose.config(text="CLOSE:", font=value.titleFont, bg=self.color, fg=value.titleColor)
         self.officeClose.pack()
-        self.officeClose.place(x=12, y=value.widgetHeight - 78)
+        self.officeClose.place(x=45, y=value.widgetHeight - 78)
 
         self.officeLabel = Label(self.officesetting)
         self.officeLabel.config(text="OFFICE HOURS", font=value.titleFont, bg=self.color, fg=value.titleColor)
@@ -69,7 +69,7 @@ class officehourssetting(object):
         self.officeTip = Label(self.officesetting)
         self.officeTip.config(text="", font=value.tipFont, bg=self.color, fg=value.titleColor)
         self.officeTip.pack()
-        self.officeTip.place(x=2, y=25)
+        self.officeTip.place(x=5, y=25)
 
     def setTemp(self, temperature):
         self.officeTemp = temperature

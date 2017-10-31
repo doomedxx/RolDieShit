@@ -10,7 +10,7 @@ titleColor = 'white'             ## Change header font color
 titleFont = ("DIN-bold", 13)
 
 tipColor = 'gray95'             ## tip Font
-tipFont = ("DIN-bold", 8)
+tipFont = ("DIN", 8)
 
 indicatorColor = 'white'       ## Change information font color
 informationFont = ("DIN-bold", 34)

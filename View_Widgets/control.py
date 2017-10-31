@@ -1,6 +1,7 @@
 from tkinter import *
 
 import Frame.mainframe as mainframe
+from Controller import control_controller as controller
 import View_Widgets.widgetValues as value
 
 
@@ -20,15 +21,17 @@ class controlwidget(object):
     controlLabel.pack()
     controlLabel.place(x=5, y=1)
 
-    controlButtonCloseAll = Button(controlWidget, text="OPEN ALL")
+    controlButtonCloseAll = Button(controlWidget, text="CLOSE ALL")
     controlButtonCloseAll.config(font=(value.font, 15), bg=color, fg=value.indicatorColor,borderwidth= 1, relief="raised")
     controlButtonCloseAll.pack()
     controlButtonCloseAll.place(height=25, width=110,x=5, y=35)
+    controlButtonCloseAll.bind("<Button-1>", controller.closeAll)
 
-    controlButtonOpenAll = Button(controlWidget, text="CLOSE ALL")
+    controlButtonOpenAll = Button(controlWidget, text="OPEN ALL")
     controlButtonOpenAll.config(font=(value.font, 15), bg=color, fg=value.indicatorColor,borderwidth= 1, relief="raised")
     controlButtonOpenAll.pack()
     controlButtonOpenAll.place(height=25, width=110,x=5, y=65)
+    controlButtonOpenAll.bind("<Button-1>", controller.openAll)
 
     controlWidget.pack(side=LEFT)
     controlWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=controlWidgetPosX, y=controlWidgetPosY)

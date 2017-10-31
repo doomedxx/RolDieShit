@@ -11,11 +11,8 @@ def onEnterScript():
 def onLeaveScript():
     office.office1.setTooltip("")
 
-openhour = 23
+openhour = 8
 openminute = 0
-
-closehour = 17
-closeminute = 0
 
 def increaseOpenTimeScript():
     global openhour
@@ -50,28 +47,7 @@ def decreaseOpenTimeScript():
     office.office1.officeOpenValue.config(text=time)
 
 def increaseCloseTimeScript():
-    global closehour
-    global closeminute
-    if closeminute == 50:
-        closeminute = 0
-        closehour+=1
-        time = "{}:{}0".format(closehour,closeminute)
-    else:
-        closeminute+= 10
-        time = "{}:{}".format(closehour,closeminute)
-    office.office1.officeCloseValue.config(text=time)
+    pass
 
 def decreaseCloseTimeScript():
-    global closehour
-    global closeminute
-    if closeminute == 10:
-        closeminute = 0
-        time = "{}:{}0".format(closehour,closeminute)
-    elif closeminute <= 0:
-        closehour-=1
-        closeminute = 50
-        time = "{}:{}".format(closehour,closeminute)
-    else:
-        closeminute-= 10
-        time = "{}:{}".format(closehour,closeminute)
-    office.office1.officeCloseValue.config(text=time)
+    pass
