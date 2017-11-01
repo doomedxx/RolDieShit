@@ -1,20 +1,21 @@
 import Frame.mainframe as mainframe
-import View_Widgets.temperature as temperature
-import View_Widgets.light as light
-import View_Widgets.control as control
-import View_Widgets.rollercontrol as roller
-import View_Widgets.graph1 as graph1
-import View_Widgets.graph2 as graph2
-import View_Widgets.graph3 as graph3
-import View_Widgets.clock as clock
-import View_Settings.theme as theme
-import View_Settings.maxtemp as max
-import View_Settings.mintemp as min
-import View_Settings.officehours as office
-import View_Settings.clockSettings as clocksettings
-import Model.maxtemp_model as tempModel
-import Controller.clock_controller as clockcontrol
-import View_Widgets.topframe as Holder
+from View_Widgets import light
+from View_Widgets import clock
+from View_Widgets import control
+from View_Widgets import graph1
+from View_Widgets import graph2
+from View_Widgets import graph3
+from View_Widgets import rollercontrol
+from View_Widgets import temperature
+from View_Widgets import topframe
+from View_Widgets import widgetValues
+from View_Widgets import setting_clock
+from View_Widgets import setting_mintemp
+from View_Widgets import setting_maxtemp
+from View_Widgets import setting_theme
+from View_Widgets import setting_values
+from View_Widgets import settings_officehours
+
 
 if __name__ == '__main__':
     mainframe.mainloop()

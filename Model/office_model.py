@@ -1,6 +1,5 @@
-from View_Settings import officehours as office
-from Controller import office_controller
-import time
+from View_Widgets import settings_officehours as office
+
 
 ##########################################################################
 ## ALLES IS HARTSTIKKE OMSLACHTIG EN KAN NETTER. #########################

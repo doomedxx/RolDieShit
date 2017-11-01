@@ -19,7 +19,7 @@ class widgetholder:
         self.titleIcon.pack()
         self.titleIcon.place(x=20, y=0)
 
-        self.titleLabel = Label(self.widgetHolder, text="ROLDIESHIT DASHBOARD")
+        self.titleLabel = Label(self.widgetHolder, text="ROLDIESHIZZLE DASHBOARD")
         self.titleLabel.config(font=("code bold", 22), bg="gray25", fg=value.titleColor)
         self.titleLabel.pack()
         self.titleLabel.place(x=95, y=20)
@@ -27,17 +27,17 @@ class widgetholder:
         self.menuButton1 = Button(self.widgetHolder, text="VIEW")
         self.menuButton1.config(font=("code bold", 22), bg="gray25", fg=value.titleColor, borderwidth= 1, relief="flat")
         self.menuButton1.pack()
-        self.menuButton1.place(x=445, y=13)
+        self.menuButton1.place(x=480, y=13)
 
         self.menuButton2 = Button(self.widgetHolder, text="SETTINGS")
         self.menuButton2.config(font=("code bold", 22), bg="gray25", fg=value.titleColor, borderwidth= 1, relief="flat")
         self.menuButton2.pack()
-        self.menuButton2.place(x=555, y=13)
+        self.menuButton2.place(x=590, y=13)
 
         self.Selected = Label(self.widgetHolder, text="..................................................................")
         self.Selected.config(font=("code bold", 7), bg="gray25", fg="lightgreen", borderwidth= 1, relief="flat")
         self.Selected.pack()
-        self.Selected.place(x=453, y=46)
+        self.Selected.place(x=488, y=46)
 
         self.menuButton1.bind("<Button-1>", executeView)
         self.menuButton2.bind("<Button-1>", executeSettings)
@@ -45,12 +45,12 @@ class widgetholder:
 def executeView(event):
     ev.goView(event)
     print("View pressed")
-    w1.Selected.place(x=453, y=46)
+    w1.Selected.place(x=493, y=46)
     w1.Selected.config(text="..................................................................")
 def executeSettings(event):
     print("Settings pressed")
     ev.goSettings(event)
-    w1.Selected.place(x=565, y=46)
+    w1.Selected.place(x=595, y=46)
     w1.Selected.config(text="............................................................................................................................")
 
 w1 = widgetholder()

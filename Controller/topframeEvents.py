@@ -1,7 +1,4 @@
-import Frame.mainframe as f
-from tkinter import *
 import View_Widgets
-import View_Settings
 
 
 def goSettings(event):
@@ -14,19 +11,19 @@ def goSettings(event):
     View_Widgets.graph1.g1.graphWidget.place_forget()
     View_Widgets.rollercontrol.r1.rollerWidget.place_forget()
 
-    View_Settings.officehours.office1.addBlock()
-    View_Settings.theme.t1.addBlock()
-    View_Settings.maxtemp.max1.addBlock()
-    View_Settings.mintemp.min1.addBlock()
-    View_Settings.clockSettings.c1.addBlock()
+    View_Widgets.settings_officehours.office1.addBlock()
+    View_Widgets.setting_theme.t1.addBlock()
+    View_Widgets.setting_maxtemp.max1.addBlock()
+    View_Widgets.setting_mintemp.min1.addBlock()
+    View_Widgets.setting_clock.c1.addBlock()
 
 
 def goView(event):
-    View_Settings.theme.t1.themeWidget.place_forget()
-    View_Settings.maxtemp.max1.closetempWidget.place_forget()
-    View_Settings.mintemp.min1.opentempsetting.place_forget()
-    View_Settings.clockSettings.c1.clocksettingwidget.place_forget()
-    View_Settings.officehours.office1.officesetting.place_forget()
+    View_Widgets.setting_theme.t1.themeWidget.place_forget()
+    View_Widgets.setting_maxtemp.max1.closetempWidget.place_forget()
+    View_Widgets.setting_mintemp.min1.opentempsetting.place_forget()
+    View_Widgets.setting_clock.c1.clocksettingwidget.place_forget()
+    View_Widgets.settings_officehours.office1.officesetting.place_forget()
 
 
     View_Widgets.control.replace()

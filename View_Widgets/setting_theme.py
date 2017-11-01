@@ -2,8 +2,7 @@ from tkinter import *
 
 import Controller.theme_controller as controller
 import Frame.mainframe as mainframe
-import View_Settings.settingValues as value
-
+import View_Widgets.setting_values as value
 
 
 class themewidget(object):

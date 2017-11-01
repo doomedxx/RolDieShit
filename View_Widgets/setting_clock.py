@@ -1,8 +1,6 @@
 from tkinter import *
-import Controller.clock_controller as controller
 import Frame.mainframe as mainframe
-import View_Settings.settingValues as value
-
+import View_Widgets.setting_values as value
 class clocksettingwidget(object):
     mainframe.widgetList.append("clocksetting")
     def __init__(self):
@@ -11,8 +9,8 @@ class clocksettingwidget(object):
         self.tooltip = ""
         self.color = "DodgerBlue4"
         self.clocksettingwidget = Frame(mainframe.root, relief=SUNKEN)
-        self.clocksettingwidget.bind("<Enter>", controller.onEnter)
-        self.clocksettingwidget.bind("<Leave>", controller.onLeave)
+    #self.clocksettingwidget.bind("<Enter>", onEnter)
+       # self.clocksettingwidget.bind("<Leave>", onLeave)
 
         self.clocksettingLabel = Label(self.clocksettingwidget)
         self.clocksettingLabel.config(text="CLOCK MODE", font=value.titleFont, bg=self.color, fg=value.titleColor)

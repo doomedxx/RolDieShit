@@ -1,13 +1,15 @@
-import time
-import threading
+
 import Model.clock_model as model
-def timeString():
-    time_string = time.strftime('%H:%M:%S')
-    threading.Timer(1, timeString).start()
-    return time_string
+
+def updateClock():
+    model.updateClock()
+    print("Ik werk")
 
 def onEnter(event):
     model.onEnterScript()
 
 def onLeave(event):
     model.onLeaveScript()
+
+def go12(event):
+    model.go12

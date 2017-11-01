@@ -1,4 +1,5 @@
-from View_Settings import maxtemp as max
+from View_Widgets import setting_maxtemp as max
+
 temp = 23
 
 def increaseTemp():

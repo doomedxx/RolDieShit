@@ -1,4 +1,4 @@
-from View_Settings import mintemp as min
+from View_Widgets import setting_mintemp as min
 
 temp = 27
 

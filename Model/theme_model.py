@@ -1,6 +1,7 @@
-from View_Settings import theme as theme
-import Frame.mainframe as f
 import threading
+
+import Frame.mainframe as f
+from View_Widgets import setting_theme as theme
 
 color = 20
 

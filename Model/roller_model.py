@@ -29,12 +29,9 @@ def rollToggleStart(rolluck):
         eval("view.r1.roller" + str(rolluck) + "Toggle.config(state=DISABLED)")
         threading.Timer(3, open, [rolluck]).start()
 
-def openAll():
+def All(toggle):
     for k in rollucks.keys():
-        rollucks[k] = "Closed"
-        rollToggleStart(k)
-
-def closeAll():
-    for k in rollucks.keys():
-        rollucks[k] = "Open"
-        rollToggleStart(k)
+        v = rollucks[k]
+        if v == toggle:
+            rollucks[k] = toggle
+            rollToggleStart(k)
