@@ -1,0 +1,8 @@
+import serial
+
+ser = serial.Serial('COM3', 19200, timeout=0)
+
+value = ser.readline()
+print(value)
+toInt = int(hex(int.from_bytes(value, byteorder='little')), 16)
+print(toInt)
