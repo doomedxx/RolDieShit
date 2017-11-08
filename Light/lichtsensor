@@ -3,7 +3,8 @@
 #include <util/delay.h>
 #include <avr/interrupt.h>
 #include <stdbool.h>
-#define BLINK_DELAY_MS 200
+#define BLINK_DELAY_MS 250
+#define UBBRVAL 51
 float D_LIGHTTHRESHOLD;
  
 int main (void)
@@ -37,7 +38,6 @@ int main (void)
   PORTB &= ~_BV(PORTB4);
   PORTB &= ~_BV(PORTB3);
   _delay_ms(BLINK_DELAY_MS);
-
  }
 }
 
@@ -47,8 +47,8 @@ float getLight(void)
   ADCSRA |= _BV(ADSC); // Start adc measurement
   loop_until_bit_is_clear(ADCSRA, ADSC);  // proceed when done
 
-  float vol = (float)ADCW / 1024 * 100;
-  return vol;
+  float lightLevel = (float)ADCW / 1024 * 100;
+  return lightLevel;
 }
 
 void setlightthreshold(float light)
@@ -81,4 +81,25 @@ void adc_init(void){
   ADMUX |= _BV(REFS0);
   ADMUX &= ~_BV(REFS1); // 5v mode
   ADCSRA |= _BV(ADEN); // Turn on
+}
+
+void init_connection()
+{
+  // Set baudrate 19200
+  UBRR0H = 0;
+  UBRR0L = UBBRVAL;
+  // disable U2X mode
+  UCSR0A = 0;
+  // enable transmitter
+  UCSR0B = _BV(TXEN0) | _BV(RXEN0);
+  // set frame format : asynchronous, 8 data bits, 1 stop bit, no parity
+  UCSR0C = _BV(UCSZ01) | _BV(UCSZ00);
+}
+
+void send_data(uint8_t data)
+{
+  //UDRE is set when the transmit buffer is empty
+  loop_until_bit_is_set (UCSR0A , UDRE0);
+  //send the data
+  UDR0 = data;
 }
