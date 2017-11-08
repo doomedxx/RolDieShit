@@ -1,10 +1,11 @@
 import time
 from tkinter import *
-
+import tkinter as tk
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 from Controller.clock_controller import updateClock as clock
-class clockwidget(object):
+
+class clockwidget(tk.Tk):
     mainframe.widgetList.append("Clock")
     def __init__(self):
         self.clockWidgetPosX = 445

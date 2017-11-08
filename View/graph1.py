@@ -1,3 +1,9 @@
+import matplotlib
+matplotlib.use("TkAgg")
+
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
+
 from tkinter import *
 
 import Frame.mainframe as mainframe
@@ -13,7 +19,7 @@ class graphwidget(object):
     graphLabel.place(x=5, y=1)
 
     graphWidget.pack(side=LEFT)
-    graphWidget.place(height=150, width=525, x=330, y=mainframe.windowHeight-160)
+    graphWidget.place(height=150, width=525, x=330, y=410)
     graphWidget.config(bg=value.widgetBackground,borderwidth= value.borderWidth, relief=value.relief)
 
     graphLabel1 = Label(graphWidget, text="GRAPH 1")
@@ -26,7 +32,8 @@ class graphwidget(object):
     graphLabel2.pack()
     graphLabel2.place(x=10, y=30)
 
+
 def replace():
-    g1.graphWidget.place(height=150, width=530, x=330, y=mainframe.windowHeight-160)
+    g1.graphWidget.place(height=150, width=525, x=330, y=410)
 
 g1 = graphwidget

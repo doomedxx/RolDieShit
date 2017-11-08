@@ -4,6 +4,7 @@ from View import clock
 from View import control
 from View import graph1
 from View import graph2
+from View import graphtest
 from View import graph3
 from View import rollercontrol
 from View import temperature

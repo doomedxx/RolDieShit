@@ -24,7 +24,7 @@ class rollerwidget(object):
     rollerLabel.place(x=5, y=1)
 
     rollerWidget.pack(side=LEFT)
-    rollerWidget.place(height=widgetHeight, width=widgetWidth, x=25, y=mainframe.windowHeight-160)
+    rollerWidget.place(height=widgetHeight, width=widgetWidth, x=25, y=410)
     rollerWidget.config(bg=widgetBackground,borderwidth= value.borderWidth, relief="raised")
 
     rollerLabel1 = Label(rollerWidget, text="Rolluck #1:")
@@ -88,6 +88,6 @@ class rollerwidget(object):
     roller3Toggle.bind("<Button-1>",lambda event:  controller.rollToggle(3))
 
 def replace():
-    r1.rollerWidget.place(height=150, width=300, x=25, y=mainframe.windowHeight-160)
+    r1.rollerWidget.place(height=150, width=300, x=25, y=410)
 
 r1 = rollerwidget()

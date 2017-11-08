@@ -13,7 +13,7 @@ class graphwidget2(object):
     graphlabel2.place(x=5, y=1)
 
     graphWidget2.pack(side=LEFT)
-    graphWidget2.place(height=150, width=300, x=25, y=180)
+    graphWidget2.place(height=220, width=300, x=25, y=180)
     graphWidget2.config(bg=value.widgetBackground,borderwidth= value.borderWidth, relief=value.relief)
 
     graphlabel21 = Label(graphWidget2, text="GRAPH 1")
@@ -27,6 +27,6 @@ class graphwidget2(object):
     graphlabel22.place(x=10, y=30)
 
 def replace():
-    g2.graphWidget2.place(height=150, width=300, x=25, y=180)
+    g2.graphWidget2.place(height=220, width=300, x=25, y=180)
 
 g2 = graphwidget2()
