@@ -2,7 +2,7 @@ from tkinter import *
 
 import Controller.roller_controller as controller
 import Frame.mainframe as mainframe
-import View_Widgets.widgetValues as value
+import View.widgetValues as value
 
 
 class rollerwidget(object):

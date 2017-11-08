@@ -2,7 +2,7 @@ import time
 from tkinter import *
 
 import Frame.mainframe as mainframe
-import View_Widgets.widgetValues as value
+import View.widgetValues as value
 from Controller.clock_controller import updateClock as clock
 class clockwidget(object):
     mainframe.widgetList.append("Clock")

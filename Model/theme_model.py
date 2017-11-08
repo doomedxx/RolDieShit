@@ -1,7 +1,7 @@
 import threading
 
 import Frame.mainframe as f
-from View_Widgets import setting_theme as theme
+from View import setting_theme as theme
 
 color = 20
 

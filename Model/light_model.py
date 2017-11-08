@@ -1,4 +1,4 @@
-from View_Widgets import light as view
+from View import light as view
 import Frame.mainframe as f
 import threading
 import random

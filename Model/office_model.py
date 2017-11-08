@@ -1,4 +1,4 @@
-from View_Widgets import settings_officehours as office
+from View import settings_officehours as office
 
 
 ##########################################################################

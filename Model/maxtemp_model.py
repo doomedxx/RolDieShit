@@ -1,4 +1,4 @@
-from View_Widgets import setting_maxtemp as max
+from View import setting_maxtemp as max
 
 temp = 23
 

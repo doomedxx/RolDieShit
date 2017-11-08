@@ -2,7 +2,7 @@ from tkinter import *
 
 import Frame.mainframe as mainframe
 from Controller import control_controller as controller
-import View_Widgets.widgetValues as value
+import View.widgetValues as value
 
 
 class controlwidget(object):

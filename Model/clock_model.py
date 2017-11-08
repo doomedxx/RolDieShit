@@ -1,5 +1,5 @@
-from View_Widgets import setting_clock as clock_setting
-from View_Widgets import clock as clock
+from View import setting_clock as clock_setting
+from View import clock as clock
 import Frame.mainframe as frame
 import time
 import threading

@@ -1,4 +1,4 @@
-from View_Widgets import rollercontrol as view
+from View import rollercontrol as view
 from tkinter import *
 from time import sleep
 import threading

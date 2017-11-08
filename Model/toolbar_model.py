@@ -1,5 +1,5 @@
-import View_Widgets as view
-from View_Widgets import toolbar as toolview
+import View as view
+from View import toolbar as toolview
 import Frame.mainframe as frame
 import threading
 

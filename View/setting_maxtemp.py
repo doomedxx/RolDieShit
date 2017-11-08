@@ -2,7 +2,7 @@ from tkinter import *
 
 import Controller.maxtemp_controller as controller
 import Frame.mainframe as mainframe
-import View_Widgets.setting_values as value
+import View.setting_values as value
 
 
 class closetempsetting(object):
