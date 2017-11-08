@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import Tk
 
 
-windowHeight = 500
+windowHeight = 570
 windowWidth = 880
 
 root = Tk()
