@@ -5,13 +5,12 @@
 #include <stdbool.h>
 #define BLINK_DELAY_MS 250
 #define UBBRVAL 51
-float D_LIGHTTHRESHOLD;
  
 int main (void)
 {
-  eeprom_init(); // Load eeprom to ram, or initialize eeprom
   port_init(); // Initialize port data registers
   adc_init(); // Initialize ADC
+  init_connection();   
  
  while(1) {
 
@@ -51,29 +50,12 @@ float getLight(void)
   return lightLevel;
 }
 
-void setlightthreshold(float light)
-{
-  D_LIGHTTHRESHOLD = light;
-  eeprom_write_float((float*)0x05, light);
-}
-
-void eeprom_init(){
-  // Checks  if eeprom is already set, if true load the values in ram, otherwise reset to default
-  if (eeprom_read_byte((uint8_t*)0x00) != (uint8_t)0x01){
-    // Set light threshold
-    eeprom_write_float((float*)0x05, 80);
-  }
-  // Load the values into ram
-  D_LIGHTTHRESHOLD = eeprom_read_float((float*)0x05);
-}
-
 void port_init(void){
   DDRC &= ~_BV(DDC0); // Analog pin 0 input Light
    /* set pin 3,4,5 of PORTB for output*/
  DDRB |= _BV(DDB5);   //rode led
  DDRB |= _BV(DDB4);   //gele led
  DDRB |= _BV(DDB3);   //groene led
-
 }
 
 void adc_init(void){
