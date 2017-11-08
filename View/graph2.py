@@ -1,5 +1,9 @@
 from tkinter import *
+import matplotlib
+matplotlib.use("TkAgg")
 
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
+from matplotlib.figure import Figure
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 
@@ -7,26 +11,24 @@ import View.widgetValues as value
 class graphwidget2(object):
     graphWidget2 = Frame(mainframe.root, relief=SUNKEN)
 
-    graphlabel2 = Label(graphWidget2, text="EEN GRAPH")
-    graphlabel2.config(font=(value.titlefont), bg=value.widgetBackground, fg=value.titleColor)
-    graphlabel2.pack()
-    graphlabel2.place(x=5, y=1)
 
     graphWidget2.pack(side=LEFT)
     graphWidget2.place(height=220, width=300, x=25, y=180)
     graphWidget2.config(bg=value.widgetBackground,borderwidth= value.borderWidth, relief=value.relief)
 
-    graphlabel21 = Label(graphWidget2, text="GRAPH 1")
-    graphlabel21.config(font=(value.titlefont), bg=value.widgetBackground, fg="white")
-    graphlabel21.pack()
-    graphlabel21.place(x=10, y=30)
+    f = Figure(figsize=(5,5), dpi=80, facecolor='#707a75')
+    a = f.add_subplot(111)
+    a.plot([5,10,15,20,25,30],[13,13,14,15,14,14])
 
-    graphlabel22 = Label(graphWidget2, text="Placeholder")
-    graphlabel22.config(font=(value.titlefont), bg=value.widgetBackground, fg="white")
-    graphlabel22.pack()
-    graphlabel22.place(x=10, y=30)
+    canvas = FigureCanvasTkAgg(f, graphWidget2)
+    canvas.show()
+    canvas.get_tk_widget().pack(side=mainframe.TOP, expand=True)
+
+    graphlabel2 = Label(graphWidget2, text="|   TEMPERATURES")
+    graphlabel2.config(font=(value.titlefont), bg="#707a75", fg=value.titleColor)
+    graphlabel2.pack()
+    graphlabel2.place(x=5, y=-2)
 
 def replace():
     g2.graphWidget2.place(height=220, width=300, x=25, y=180)
-
 g2 = graphwidget2()

@@ -7,7 +7,7 @@ import threading
 timeMode = "12-hour"
 
 def updateClock():
-    frame.root.after(10, setTime)
+    frame.root.after(1000, setTime)
 
 def setTime():
     time_day = time.strftime('%A')
