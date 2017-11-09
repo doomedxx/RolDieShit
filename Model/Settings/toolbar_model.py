@@ -1,7 +1,7 @@
-import View as view
-from View import toolbar as toolview
 import Frame.mainframe as frame
-import threading
+import View as view
+import View.Settings as settings
+from View import toolbar as toolview
 
 selected = "view"
 color = 60
@@ -17,11 +17,11 @@ def executeSettings():
     view.graph1.g1.graphWidget.place_forget()
     view.rollercontrol.r1.rollerWidget.place_forget()
 
-    view.settings_officehours.office1.addBlock()
-    view.setting_theme.t1.addBlock()
-    view.setting_maxtemp.max1.addBlock()
-    view.setting_mintemp.min1.addBlock()
-    view.setting_clock.c1.addBlock()
+    settings.settings_officehours.office1.addBlock()
+    settings.setting_theme.t1.addBlock()
+    settings.setting_maxtemp.max1.addBlock()
+    settings.setting_mintemp.min1.addBlock()
+    settings.setting_clock.c1.addBlock()
 
     toolview.w1.menuButton2.config(fg="white")
     toolview.w1.Selected.place(x=660, y=46)
@@ -32,11 +32,11 @@ def executeSettings():
 def executeView():
     global selected
     global color
-    view.setting_theme.t1.themeWidget.place_forget()
-    view.setting_maxtemp.max1.closetempWidget.place_forget()
-    view.setting_mintemp.min1.opentempsetting.place_forget()
-    view.setting_clock.c1.clocksettingwidget.place_forget()
-    view.settings_officehours.office1.officesetting.place_forget()
+    settings.setting_theme.t1.themeWidget.place_forget()
+    settings.setting_maxtemp.max1.closetempWidget.place_forget()
+    settings.setting_mintemp.min1.opentempsetting.place_forget()
+    settings.setting_clock.c1.clocksettingwidget.place_forget()
+    settings.settings_officehours.office1.officesetting.place_forget()
 
     view.control.replace()
     view.graph1.replace()

@@ -1,6 +1,9 @@
 from tkinter import *
+
 import Frame.mainframe as mainframe
-import View.setting_values as value
+import View.Settings.setting_values as value
+
+
 class clocksettingwidget(object):
     mainframe.widgetList.append("clocksetting")
     def __init__(self):

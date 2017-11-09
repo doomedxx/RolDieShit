@@ -1,4 +1,4 @@
-from View import settings_officehours as office
+from View.Settings import settings_officehours as office
 
 
 ##########################################################################

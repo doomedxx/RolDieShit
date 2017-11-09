@@ -1,4 +1,4 @@
-from View import setting_mintemp as min
+from View.Settings import setting_mintemp as min
 
 temp = 27
 

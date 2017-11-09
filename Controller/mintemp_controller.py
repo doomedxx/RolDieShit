@@ -1,4 +1,4 @@
-import Model.mintemp_model as model
+import Model.Settings.mintemp_model as model
 
 def increaseTempGo(event):
     model.increaseTemp()

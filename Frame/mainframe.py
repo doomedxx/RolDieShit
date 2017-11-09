@@ -24,13 +24,17 @@ loadfont("Fonts/DINLight.ttf")
 loadfont("Fonts/DINMedium.ttf")
 loadfont("Fonts/DINRegular.ttf")
 
-windowHeight = 570
+windowHeight = 580
 windowWidth = 880
 
 root = Tk()
 root.configure(background='gray15')
-root.title("RolDieShit Dashboard")
+root.title("RolDieShizzle Dashboard")
 root.resizable(width=False, height=False)
 root.minsize(width=windowWidth, height=windowHeight)
 root.iconbitmap('icon.ico')
 widgetList = []
+
+VersionNumber = Label(root)
+VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg="gray15",  fg="white")
+VersionNumber.place(x=windowWidth - 90, y=windowHeight-25)

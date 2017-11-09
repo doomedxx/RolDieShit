@@ -1,8 +1,8 @@
-from View import setting_clock as clock_setting
-from View import clock as clock
-import Frame.mainframe as frame
 import time
-import threading
+
+import Frame.mainframe as frame
+from View import clock as clock
+from View.Settings import setting_clock as clock_setting
 
 timeMode = "12-hour"
 

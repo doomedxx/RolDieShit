@@ -2,7 +2,7 @@ from tkinter import *
 
 import Controller.mintemp_controller as controller
 import Frame.mainframe as mainframe
-import View.setting_values as value
+import View.Settings.setting_values as value
 
 
 class opentempsetting(object):

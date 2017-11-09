@@ -9,12 +9,12 @@ from View import rollercontrol
 from View import temperature
 from View import toolbar
 from View import widgetValues
-from View import setting_clock
-from View import setting_mintemp
-from View import setting_maxtemp
-from View import setting_theme
-from View import setting_values
-from View import settings_officehours
+from View.Settings import setting_clock
+from View.Settings import setting_mintemp
+from View.Settings import setting_maxtemp
+from View.Settings import setting_theme
+from View.Settings import setting_values
+from View.Settings import settings_officehours
 
 def kill():
     print("Dashboard is gesloten")

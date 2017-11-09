@@ -1,4 +1,4 @@
-import Model.maxtemp_model as model
+import Model.Settings.maxtemp_model as model
 def increaseTempGo(event):
     model.increaseTemp()
 

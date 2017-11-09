@@ -1,4 +1,4 @@
-from View import setting_maxtemp as max
+from View.Settings import setting_maxtemp as max
 
 temp = 23
 

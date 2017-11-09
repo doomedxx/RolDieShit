@@ -1,6 +1,4 @@
-import time
-import threading
-import Model.office_model as model
+import Model.Settings.office_model as model
 
 def onEnter(event):
     model.onEnterScript()

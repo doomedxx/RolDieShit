@@ -1,15 +1,14 @@
-import threading
-
 import Frame.mainframe as f
-from View import setting_theme as theme
+from View.Settings import setting_theme as theme
 
-color = 20
+color = 15
 
 def lightTransition():
     global color
     if color <= 80:
         f.root.after(10, lightTransition)
         f.root.configure(background='gray{}'.format(color))
+        f.VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="gray5")
         color+=3
 
 def darkTransition():
@@ -17,6 +16,7 @@ def darkTransition():
     if color >= 15:
         f.root.after(10, darkTransition)
         f.root.configure(background='gray{}'.format(color))
+        f.VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="white")
         color-=3
 
 def onEnterScript():
