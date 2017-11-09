@@ -8,16 +8,16 @@ import random
 lightNum = 50
 def updateTick():
     global lightNum
-    f.root.after(500, updateTick)
+    f.root.after(100, updateTick)
     upordown = random.randint(0,1)
     if upordown == 0:
-        lightNum-=5
+        lightNum-=2
     else:
-        lightNum+=5
+        lightNum+=2
     if lightNum >= 100:
-        lightNum = 100
+        lightNum = 95
     if lightNum <= 0:
-        lightNum = 0
+        lightNum = 5
     checkPreset(lightNum)
     updateGraph(lightNum)
     view.l1.lightLabelCount.config(text="{}%".format(lightNum))
@@ -40,20 +40,22 @@ def checkPreset(light):
     elif light >= 99:
         view.l1.lightLabelPreset.config(text="[Full Bright]")
 
-averageList = []
+averageList = [0,0,0,0,0,0,0,0,0,0,0]
 cycle = 0
 def updateGraph(light):
     global averageList
     global cycle
-    graph.g3.y.pop(0)
+    graph.g3.x.append(cycle)
     graph.g3.y.append(light)
-
+    cycle+=1
     average = round(sum(graph.g3.y) / len(graph.g3.y))
     averageList.append(average)
+    print(len(graph.g3.x))
     if cycle >= 11:
-        averageList.pop(0)
+        graph.g3.line2.set_xdata(graph.g3.x)
         graph.g3.line2.set_ydata(averageList)
-    graph.g3.line.set_ydata(graph.g3.y)
-    graph.g3.canvas.draw()
 
-    cycle+=1
+
+    graph.g3.line.set_ydata(graph.g3.y)
+    graph.g3.line.set_xdata(graph.g3.x)
+    graph.g3.canvas.draw()
