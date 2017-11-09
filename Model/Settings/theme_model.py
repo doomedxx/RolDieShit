@@ -1,7 +1,7 @@
 import Frame.mainframe as f
 from View.Settings import setting_theme as theme
 
-color = 15
+color = 16
 
 def lightTransition():
     global color

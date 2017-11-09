@@ -1,6 +1,6 @@
 import Frame.mainframe as mainframe
-from View import light
 from View import clock
+from View import light
 from View import control
 from View import graph1
 from View import graph2

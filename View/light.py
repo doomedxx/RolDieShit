@@ -12,7 +12,7 @@ class lightWidget(object):
     lightWidgetPosY = 70
 
 
-    lightLabelCount = Label(lightWidget, text="120")
+    lightLabelCount = Label(lightWidget, text="50")
     lightLabelCount.config(font=(value.informationFont), bg="olivedrab", fg=value.indicatorColor,justify=RIGHT)
     lightLabelCount.place(width= 105,x=14, y=16)
 
