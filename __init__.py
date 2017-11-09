@@ -4,7 +4,7 @@ from View import clock
 from View import control
 from View import graph1
 from View import graph2
-from View import graph3
+from View import lightgraph
 from View import rollercontrol
 from View import temperature
 from View import toolbar
@@ -25,5 +25,4 @@ mainframe.root.protocol('WM_DELETE_WINDOW', kill)  # root is your root window
 
 def main():
     mainframe.mainloop()
-
 main()

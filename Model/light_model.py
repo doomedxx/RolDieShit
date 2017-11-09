@@ -1,5 +1,5 @@
 from View import light as view
-from View import graph3 as graph
+from View import lightgraph as graph
 import Frame.mainframe as f
 import threading
 import random

@@ -1,2 +1,2 @@
-from View import graph3
+from View import lightgraph
 
