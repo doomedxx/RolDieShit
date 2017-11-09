@@ -19,6 +19,7 @@ def loadfont(fontpath, private=True, enumerable=False):
 
 loadfont("Fonts/CODE Bold.otf")
 loadfont("Fonts/CODE Light.ttf")
+loadfont("Fonts/DINBold.ttf")
 loadfont("Fonts/DINLight.ttf")
 loadfont("Fonts/DINMedium.ttf")
 loadfont("Fonts/DINRegular.ttf")
