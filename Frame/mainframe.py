@@ -17,7 +17,8 @@ def loadfont(fontpath, private=True, enumerable=False):
     numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
     return bool(numFontsAdded)
 
-loadfont("Fonts/DINBold.ttf")
+loadfont("Fonts/CODE Bold.otf")
+loadfont("Fonts/CODE Light.ttf")
 loadfont("Fonts/DINLight.ttf")
 loadfont("Fonts/DINMedium.ttf")
 loadfont("Fonts/DINRegular.ttf")
@@ -26,7 +27,6 @@ windowHeight = 570
 windowWidth = 880
 
 root = Tk()
-print(font.families())
 root.configure(background='gray15')
 root.title("RolDieShit Dashboard")
 root.resizable(width=False, height=False)
