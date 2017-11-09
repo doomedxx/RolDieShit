@@ -11,19 +11,22 @@ class lightWidget(object):
     lightWidgetPosX = 235
     lightWidgetPosY = 70
 
-    lightLabel = Label(lightWidget, text="LIGHT LEVEL")
-    lightLabel.config(font=(value.titlefont), bg="olivedrab", fg=value.titleColor)
-    lightLabel.pack()
-    lightLabel.place(x=5, y=1)
 
     lightLabelCount = Label(lightWidget, text="120")
     lightLabelCount.config(font=(value.informationFont), bg="olivedrab", fg=value.indicatorColor,justify=RIGHT)
-    lightLabelCount.pack()
-    lightLabelCount.place(width= 105,x=25, y=23)
+    lightLabelCount.place(width= 105,x=14, y=16)
+
+    lightLabelPreset = Label(lightWidget, text="(Preset here)")
+    lightLabelPreset.config(font=(value.informationInfoFont ), bg="olivedrab", fg=value.indicatorColor,anchor="c")
+    lightLabelPreset.place(width= 105,x=25, y=77)
 
     lightWidget.pack(side=LEFT)
     lightWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=lightWidgetPosX, y=lightWidgetPosY)
     lightWidget.config(bg="olivedrab",borderwidth= value.borderWidth, relief=value.relief)
+
+    lightLabel = Label(lightWidget, text="LIGHT LEVEL")
+    lightLabel.config(font=(value.titlefont), bg="olivedrab", fg=value.titleColor)
+    lightLabel.place(x=5, y=1)
 
     tempImage = PhotoImage(file="images/light.png")
     lightIcon = Label(lightWidget, image=tempImage, bg="olivedrab")

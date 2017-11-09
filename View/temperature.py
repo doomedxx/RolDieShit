@@ -12,21 +12,16 @@ class tempwidget:
 
     image = PhotoImage(file="images/temperature.png")
     tempIcon = Label(tempWidget, image=image, bg="mediumseagreen")
-    tempIcon.pack()
     tempIcon.place(x=value.widgetWidth -80, y=value.widgetHeight /2 - 30)
-
-
-    tempLabel = Label(tempWidget)
-    tempLabel.config(text="TEMPERATURE",font=value.titlefont, bg="mediumseagreen", fg=value.titleColor)
-    tempLabel.pack()
-    tempLabel.place(x=5, y=1)
 
     tempLabelCount = Label(tempWidget, text="  23C")
     tempLabelCount.config(font=value.informationFont, bg="mediumseagreen", fg=value.indicatorColor)
-    tempLabelCount.pack()
-    tempLabelCount.place(x=0, y=22)
+    tempLabelCount.place(x=0, y=16)
 
-    tempWidget.pack(side=LEFT)
+    tempLabel = Label(tempWidget)
+    tempLabel.config(text="TEMPERATURE",font=value.titlefont, bg="mediumseagreen", fg=value.titleColor)
+    tempLabel.place(x=5, y=1)
+
     tempWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=tempWidgetPosX, y=tempWidgetPosY)
     tempWidget.config(bg="mediumseagreen",borderwidth= value.borderWidth, relief=value.relief)
 
