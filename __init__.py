@@ -7,7 +7,7 @@ from View_Widgets import graph2
 from View_Widgets import graph3
 from View_Widgets import rollercontrol
 from View_Widgets import temperature
-from View_Widgets import topframe
+from View_Widgets import toolbar
 from View_Widgets import widgetValues
 from View_Widgets import setting_clock
 from View_Widgets import setting_mintemp

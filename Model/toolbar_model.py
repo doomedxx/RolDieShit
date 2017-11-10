@@ -1,0 +1,79 @@
+import View_Widgets as view
+from View_Widgets import toolbar as toolview
+import threading
+
+selected = "view"
+color = 40
+def executeSettings():
+    global selected
+    global color
+    view.clock.c.clockWidget.place_forget()
+    view.control.c1.controlWidget.place_forget()
+    view.light.l1.lightWidget.place_forget()
+    view.temperature.t1.tempWidget.place_forget()
+    view.graph3.g3.graphWidget3.place_forget()
+    view.graph2.g2.graphWidget2.place_forget()
+    view.graph1.g1.graphWidget.place_forget()
+    view.rollercontrol.r1.rollerWidget.place_forget()
+
+    view.settings_officehours.office1.addBlock()
+    view.setting_theme.t1.addBlock()
+    view.setting_maxtemp.max1.addBlock()
+    view.setting_mintemp.min1.addBlock()
+    view.setting_clock.c1.addBlock()
+
+    toolview.w1.menuButton2.config(fg="white")
+    toolview.w1.Selected.place(x=660, y=46)
+    toolview.w1.menuButton1.config(fg="gray60")
+    toolview.w1.Selected.config(text="............................................................................................................................")
+    selected = "settings"
+    color = 40
+def executeView():
+    global selected
+    global color
+    view.setting_theme.t1.themeWidget.place_forget()
+    view.setting_maxtemp.max1.closetempWidget.place_forget()
+    view.setting_mintemp.min1.opentempsetting.place_forget()
+    view.setting_clock.c1.clocksettingwidget.place_forget()
+    view.settings_officehours.office1.officesetting.place_forget()
+
+    view.control.replace()
+    view.graph1.replace()
+    view.graph2.replace()
+    view.graph3.replace()
+    view.clock.replace()
+    view.rollercontrol.replace()
+    view.temperature.replace()
+    view.light.replace()
+
+    toolview.w1.Selected.place(x=550, y=46)
+    toolview.w1.menuButton1.config(fg="white")
+    toolview.w1.menuButton2.config(fg="gray60")
+    toolview.w1.Selected.config(text="..................................................................")
+    selected = "view"
+    color = 40
+def executeHover(button):
+    global color
+    global selected
+    if color <= 97 and button == 1 and selected !="view":
+        threading.Timer(0.01, executeHover, [button]).start()
+        toolview.w1.menuButton1.config(fg='gray{}'.format(color))
+        color+=4
+    elif color <= 97 and button == 2 and selected !="settings":
+        threading.Timer(0.01, executeHover, [button]).start()
+        toolview.w1.menuButton2.config(fg='gray{}'.format(color))
+        color+=4
+    elif color >= 100:
+        color = 98
+def executeLeave(button):
+    global color
+    global selected
+    if color >= 40 and button == 1 and selected !="view":
+        threading.Timer(0.000001, executeLeave, [button]).start()
+        toolview.w1.menuButton1.config(fg='gray{}'.format(color))
+        color-= 4
+    elif color >= 40 and button == 2 and selected !="settings":
+        threading.Timer(0.000001, executeLeave, [button]).start()
+        toolview.w1.menuButton2.config(fg='gray{}'.format(color))
+        color-= 4
+

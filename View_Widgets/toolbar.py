@@ -1,6 +1,6 @@
 from tkinter import *
 
-import Controller.topframeEvents as ev
+import Controller.toolbar_controller as controller
 import Frame.mainframe as mainframe
 import View_Widgets.widgetValues as value
 
@@ -27,30 +27,23 @@ class widgetholder:
         self.menuButton1 = Button(self.widgetHolder, text="VIEW")
         self.menuButton1.config(font=("code bold", 22), bg="gray25", fg=value.titleColor, borderwidth= 1, relief="flat")
         self.menuButton1.pack()
-        self.menuButton1.place(x=480, y=13)
+        self.menuButton1.place(x=540, y=13)
 
         self.menuButton2 = Button(self.widgetHolder, text="SETTINGS")
-        self.menuButton2.config(font=("code bold", 22), bg="gray25", fg=value.titleColor, borderwidth= 1, relief="flat")
+        self.menuButton2.config(font=("code bold", 22), bg="gray25", fg="gray60", borderwidth= 1, relief="flat")
         self.menuButton2.pack()
-        self.menuButton2.place(x=590, y=13)
+        self.menuButton2.place(x=650, y=13)
 
         self.Selected = Label(self.widgetHolder, text="..................................................................")
-        self.Selected.config(font=("code bold", 7), bg="gray25", fg="lightgreen", borderwidth= 1, relief="flat")
+        self.Selected.config(font=("code bold", 7), bg="gray25", fg="deep sky blue", borderwidth= 1, relief="flat")
         self.Selected.pack()
-        self.Selected.place(x=488, y=46)
+        self.Selected.place(x=548, y=46)
 
-        self.menuButton1.bind("<Button-1>", executeView)
-        self.menuButton2.bind("<Button-1>", executeSettings)
+        self.menuButton1.bind("<ButtonRelease-1>", controller.goView)
+        self.menuButton1.bind("<Enter>", lambda event: controller.hover(1))
+        self.menuButton1.bind("<Leave>", lambda event: controller.leave(1))
 
-def executeView(event):
-    ev.goView(event)
-    print("View pressed")
-    w1.Selected.place(x=493, y=46)
-    w1.Selected.config(text="..................................................................")
-def executeSettings(event):
-    print("Settings pressed")
-    ev.goSettings(event)
-    w1.Selected.place(x=595, y=46)
-    w1.Selected.config(text="............................................................................................................................")
-
+        self.menuButton2.bind("<ButtonRelease-1>", controller.goSettings)
+        self.menuButton2.bind("<Enter>", lambda event: controller.hover(2))
+        self.menuButton2.bind("<Leave>", lambda event: controller.leave(2))
 w1 = widgetholder()
