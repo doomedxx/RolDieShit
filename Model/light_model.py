@@ -5,22 +5,35 @@ from Model.clock_model import getTime as currentTime
 import threading
 import random
 
-lightNum = 50
+try:
+    ser = Serial(
+        port='COM3',
+        baudrate=19200,
+        parity=PARITY_NONE,
+        stopbits=STOPBITS_ONE,
+        bytesize=EIGHTBITS,
+        timeout=0)
+except:
+    print("Disconnected")
+
 def updateTick():
-    global lightNum
-    f.root.after(100, updateTick)
-    upordown = random.randint(0,1)
-    if upordown == 0:
-        lightNum-=2
-    else:
-        lightNum+=2
-    if lightNum >= 100:
-        lightNum = 95
-    if lightNum <= 0:
-        lightNum = 5
-    checkPreset(lightNum)
-    updateGraph(lightNum)
-    view.l1.lightLabelCount.config(text="{}%".format(lightNum))
+    f.root.after(1000, updateTick)
+    try:
+        value = ser.read()
+        min = 25                #min light value
+        max = 50                #max light value
+        if value:
+            lightNum = int.from_bytes(value, byteorder='little')
+            print(lightNum)
+            lightToPercentage = round((lightNum - min) * 100 / (max - min))
+            #print(lightToPercentage)
+            view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
+            checkPreset(lightToPercentage)
+            updateGraph(lightToPercentage)
+    except:
+        view.l1.lightLabelCount.config(text="N/A")
+        view.l1.lightLabelPreset.config(text="[Restart]")
+
 
 def checkPreset(light):
     if light < -10:
