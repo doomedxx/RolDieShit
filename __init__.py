@@ -16,6 +16,14 @@ from View_Widgets import setting_theme
 from View_Widgets import setting_values
 from View_Widgets import settings_officehours
 
+def kill():
+    print("Ey")
+    mainframe.root.destroy()
 
-if __name__ == '__main__':
+mainframe.root.protocol('WM_DELETE_WINDOW', kill)  # root is your root window
+
+
+def main():
     mainframe.mainloop()
+
+main()

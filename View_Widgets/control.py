@@ -6,7 +6,6 @@ import View_Widgets.widgetValues as value
 
 
 class controlwidget(object):
-    mainframe.widgetList.append("Control Widget")
     controlWidgetPosX = 655
     controlWidgetPosY = 70
     color = "RoyalBlue"

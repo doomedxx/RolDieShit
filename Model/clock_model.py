@@ -1,12 +1,13 @@
 from View_Widgets import setting_clock as clock_setting
 from View_Widgets import clock as clock
+import Frame.mainframe as frame
 import time
 import threading
 
 timeMode = "12-hour"
 
 def updateClock():
-    threading.Timer(0.1, setTime).start()
+    frame.root.after(10, setTime)
 
 def setTime():
     time_day = time.strftime('%A')

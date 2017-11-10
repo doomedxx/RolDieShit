@@ -8,14 +8,14 @@ color = 20
 def lightTransition():
     global color
     if color <= 80:
-        threading.Timer(0.000001, lightTransition).start()
+        f.root.after(10, lightTransition)
         f.root.configure(background='gray{}'.format(color))
         color+=3
 
 def darkTransition():
     global color
     if color >= 15:
-        threading.Timer(0.000001, darkTransition).start()
+        f.root.after(10, darkTransition)
         f.root.configure(background='gray{}'.format(color))
         color-=3
 

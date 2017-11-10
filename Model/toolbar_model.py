@@ -1,9 +1,10 @@
 import View_Widgets as view
 from View_Widgets import toolbar as toolview
+import Frame.mainframe as frame
 import threading
 
 selected = "view"
-color = 40
+color = 60
 def executeSettings():
     global selected
     global color
@@ -27,7 +28,7 @@ def executeSettings():
     toolview.w1.menuButton1.config(fg="gray60")
     toolview.w1.Selected.config(text="............................................................................................................................")
     selected = "settings"
-    color = 40
+    color = 60
 def executeView():
     global selected
     global color
@@ -51,29 +52,33 @@ def executeView():
     toolview.w1.menuButton2.config(fg="gray60")
     toolview.w1.Selected.config(text="..................................................................")
     selected = "view"
-    color = 40
+    color = 60
+
+totalExec = 0
 def executeHover(button):
     global color
+    global totalExec
     global selected
     if color <= 97 and button == 1 and selected !="view":
-        threading.Timer(0.01, executeHover, [button]).start()
+        frame.root.after(10, executeHover, button)
         toolview.w1.menuButton1.config(fg='gray{}'.format(color))
         color+=4
     elif color <= 97 and button == 2 and selected !="settings":
-        threading.Timer(0.01, executeHover, [button]).start()
+        frame.root.after(10, executeHover, button)
         toolview.w1.menuButton2.config(fg='gray{}'.format(color))
         color+=4
     elif color >= 100:
         color = 98
+    totalExec+=1
 def executeLeave(button):
     global color
     global selected
     if color >= 40 and button == 1 and selected !="view":
-        threading.Timer(0.000001, executeLeave, [button]).start()
+        frame.root.after(10, executeLeave, button)
         toolview.w1.menuButton1.config(fg='gray{}'.format(color))
         color-= 4
     elif color >= 40 and button == 2 and selected !="settings":
-        threading.Timer(0.000001, executeLeave, [button]).start()
+        frame.root.after(10, executeLeave, button)
         toolview.w1.menuButton2.config(fg='gray{}'.format(color))
         color-= 4
 

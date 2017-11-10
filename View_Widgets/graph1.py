@@ -5,7 +5,6 @@ import View_Widgets.widgetValues as value
 
 
 class graphwidget(object):
-    mainframe.widgetList.append("graph1")
     graphWidget = Frame(mainframe.root, relief=SUNKEN)
 
     graphLabel = Label(graphWidget, text="EEN GRAPH")

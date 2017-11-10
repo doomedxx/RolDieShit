@@ -22,7 +22,7 @@ class clockwidget(object):
         self.clockLabelTime.pack()
         self.clockLabelTime.place(x=2, y=53)
 
-        self.clockLabelDay = Label(self.clockWidget, text="")
+        self.clockLabelDay = Label(self.clockWidget, text="LOADING")
         self.clockLabelDay.config(font=("DIN-bold", 14), bg=self.color, fg=value.indicatorColor, justify=CENTER)
         self.clockLabelDay.pack()
         self.clockLabelDay.place(x=2, y=33)

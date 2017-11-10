@@ -11,5 +11,4 @@ root.title("RolDieShit Dashboard")
 root.resizable(width=False, height=False)
 root.minsize(width=windowWidth, height=windowHeight)
 root.iconbitmap('icon.ico')
-
 widgetList = []

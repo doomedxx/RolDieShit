@@ -33,7 +33,5 @@ class lightWidget(object):
 def replace():
     l1.lightWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=l1.lightWidgetPosX, y=l1.lightWidgetPosY)
 
-def update():
-    controller.update()
 l1 = lightWidget()
-update()
+controller.update()
