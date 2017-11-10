@@ -54,22 +54,19 @@ def executeView():
     selected = "view"
     color = 60
 
-totalExec = 0
 def executeHover(button):
     global color
-    global totalExec
     global selected
-    if color <= 97 and button == 1 and selected !="view":
+    if color <= 98 and button == 1 and selected !="view":
         frame.root.after(10, executeHover, button)
         toolview.w1.menuButton1.config(fg='gray{}'.format(color))
         color+=4
-    elif color <= 97 and button == 2 and selected !="settings":
+    elif color <= 98 and button == 2 and selected !="settings":
         frame.root.after(10, executeHover, button)
         toolview.w1.menuButton2.config(fg='gray{}'.format(color))
         color+=4
-    elif color >= 100:
-        color = 98
-    totalExec+=1
+    elif color >= 101:
+        color = 100
 def executeLeave(button):
     global color
     global selected

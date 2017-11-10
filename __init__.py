@@ -17,7 +17,7 @@ from View_Widgets import setting_values
 from View_Widgets import settings_officehours
 
 def kill():
-    print("Ey")
+    print("Dashboard is gesloten")
     mainframe.root.destroy()
 
 mainframe.root.protocol('WM_DELETE_WINDOW', kill)  # root is your root window
