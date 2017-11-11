@@ -40,8 +40,8 @@ widgetList = []
 
 VersionNumber = Label(root)
 VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg="gray15",  fg="white")
-VersionNumber.place(x=windowWidth - 90, y=windowHeight-20)
+VersionNumber.place(x=windowWidth - 90, y=windowHeight-25)
 
 Username = Label(root)
 Username.config(text=getpass.getuser().upper(), font=("DIN-bold", 8), bg="gray15",  fg="white")
-Username.place(x=25, y=windowHeight-20)
+Username.place(x=25, y=windowHeight-25)

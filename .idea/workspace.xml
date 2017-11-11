@@ -58,10 +58,23 @@
       <file leaf-file-name="toolbar_model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
+            <state relative-caret-position="289">
               <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainframe.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Frame/mainframe.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="445">
+              <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#277#819#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -87,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setting_maxlight.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="setting_maxlight.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/Settings/setting_maxlight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="442">
+              <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -137,9 +150,9 @@
       <find>DodgerBlue3</find>
       <find>royalblue</find>
       <find>gray50</find>
-      <find>closetemp</find>
-      <find>gray30</find>
       <find>gray55</find>
+      <find>gray30</find>
+      <find>closetemp</find>
     </findStrings>
     <replaceStrings>
       <replace>officesetting</replace>
@@ -169,9 +182,9 @@
       <replace>light</replace>
       <replace>tempGraph</replace>
       <replace>gray30</replace>
-      <replace>gray35</replace>
-      <replace>royalblue2</replace>
       <replace>gray40</replace>
+      <replace>royalblue2</replace>
+      <replace>gray35</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\wesle\IdeaProjects\GUI\Widgets</dir>
@@ -223,7 +236,6 @@
         <option value="$PROJECT_DIR$/Model/light_modelv2.py" />
         <option value="$PROJECT_DIR$/View/graph2.py" />
         <option value="$PROJECT_DIR$/Model/roller_model.py" />
-        <option value="$PROJECT_DIR$/Frame/mainframe.py" />
         <option value="$PROJECT_DIR$/Model/clock_model.py" />
         <option value="$PROJECT_DIR$/Model/light_model.py" />
         <option value="$PROJECT_DIR$/Controller/maxlight_controller.py" />
@@ -239,6 +251,7 @@
         <option value="$PROJECT_DIR$/View/Settings/setting_theme.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_mintemp.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_maxlight.py" />
+        <option value="$PROJECT_DIR$/Frame/mainframe.py" />
       </list>
     </option>
   </component>
@@ -275,6 +288,11 @@
               <item name="RolDieShit" type="b2602c69:ProjectViewProjectNode" />
               <item name="RolDieShit" type="462c0819:PsiDirectoryNode" />
               <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RolDieShit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RolDieShit" type="462c0819:PsiDirectoryNode" />
+              <item name="Frame" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RolDieShit" type="b2602c69:ProjectViewProjectNode" />
@@ -752,17 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Frame/mainframe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="45" column="79" lean-forward="false" selection-start-line="45" selection-start-column="79" selection-end-line="45" selection-end-column="79" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#277#819#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/light.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -902,16 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Settings/setting_clock.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -954,10 +951,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/View/Settings/setting_maxlight.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="442">
+          <caret line="26" column="38" lean-forward="true" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Frame/mainframe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+            <element signature="e#277#819#0" expanded="false" />
           </folding>
         </state>
       </provider>
