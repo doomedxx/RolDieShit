@@ -11,7 +11,7 @@ class opentempsetting(object):
         self.opentemp = 27
         self.opentempsettingPosX = 655
         self.opentempsettingPosY = 280
-        self.color = "dark slate blue"
+        self.color = "gray30"
         self.opentempsetting = Frame(mainframe.root, relief=SUNKEN)
         self.opentempsetting.bind("<Enter>", controller.onEnter)
         self.opentempsetting.bind("<Leave>", controller.onLeave)
@@ -32,7 +32,7 @@ class opentempsetting(object):
         self.C.place(x=85, y=value.widgetHeight - 95)
 
         self.maxIncrement = Button(self.opentempsetting)
-        self.maxIncrement.config(text="+",font=("DIN-bold", 13), bg="gray25", fg=value.titleColor, height=-10, width=1)
+        self.maxIncrement.config(text="+",font=("DIN-bold", 13), bg="gray40", fg=value.titleColor, height=-10, width=1)
         self.maxIncrement.pack()
         self.maxIncrement.place(x=118, y=value.widgetHeight - 80)
         self.maxIncrement.bind("<Button-1>", controller.increaseTempGo)
@@ -48,7 +48,7 @@ class opentempsetting(object):
         self.opentempTip.place(x=2, y=30)
 
         self.minIncrement = Button(self.opentempsetting)
-        self.minIncrement.config(text="-",font=("DIN-bold", 13), bg="gray25", fg=value.titleColor, height=-10, width=1)
+        self.minIncrement.config(text="-",font=("DIN-bold", 13), bg="gray40", fg=value.titleColor, height=-10, width=1)
         self.minIncrement.pack()
         self.minIncrement.place(x=12, y=value.widgetHeight - 80)
         self.minIncrement.bind("<Button-1>", controller.decreaseTempGo)

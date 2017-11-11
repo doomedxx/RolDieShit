@@ -9,7 +9,7 @@ class officehourssetting(object):
 
     mainframe.widgetList.append("closetemp")
     def __init__(self):
-        self.color = "goldenrod"
+        self.color = "gray30"
         self.officetemp = 23
         self.officesettingPosX = 655
         self.officesettingPosY = 70
@@ -28,25 +28,25 @@ class officehourssetting(object):
         self.officeOpen.place(x=45, y=value.widgetHeight - 125)
 
         self.incOpen = Button(self.officesetting)
-        self.incOpen.config(text="+",font=("DIN-bold", 8), bg="gray20", fg=value.titleColor, height=-50, width=1)
+        self.incOpen.config(text="+",font=("DIN-bold", 8), bg="gray40", fg=value.titleColor, height=-50, width=1)
         self.incOpen.pack()
         self.incOpen.place(x=110, y=value.widgetHeight - 100)
         self.incOpen.bind("<Button-1>", controller.increaseOpenTime)
 
         self.decOpen = Button(self.officesetting)
-        self.decOpen.config(text="-",font=("DIN-bold", 8), bg="gray20", fg=value.titleColor, height=-50, width=1)
+        self.decOpen.config(text="-",font=("DIN-bold", 8), bg="gray40", fg=value.titleColor, height=-50, width=1)
         self.decOpen.pack()
         self.decOpen.place(x=20, y=value.widgetHeight - 100)
         self.decOpen.bind("<Button-1>", controller.decreaseOpenTime)
 
         self.incClose = Button(self.officesetting)
-        self.incClose.config(text="+",font=("DIN-bold", 8), bg="gray20", fg=value.titleColor, height=-50, width=1)
+        self.incClose.config(text="+",font=("DIN-bold", 8), bg="gray40", fg=value.titleColor, height=-50, width=1)
         self.incClose.pack()
         self.incClose.place(x=110, y=value.widgetHeight - 48)
         self.incClose.bind("<Button-1>", controller.increaseCloseTime)
 
         self.decClose = Button(self.officesetting)
-        self.decClose.config(text="-",font=("DIN-bold", 8), bg="gray20", fg=value.titleColor, height=-50, width=1)
+        self.decClose.config(text="-",font=("DIN-bold", 8), bg="gray40", fg=value.titleColor, height=-50, width=1)
         self.decClose.pack()
         self.decClose.place(x=20, y=value.widgetHeight - 48)
         self.decClose.bind("<Button-1>", controller.decreaseCloseTime)
@@ -80,7 +80,7 @@ class officehourssetting(object):
 
     def addBlock(self):
         self.officesetting.pack(side=LEFT)
-        self.officesetting.place(height=value.widgetHeight, width=value.widgetWidth, x=375, y=self.officesettingPosY)
+        self.officesetting.place(height=value.widgetHeight, width=value.widgetWidth, x=550, y=self.officesettingPosY)
         self.officesetting.config(bg=self.color,borderwidth= value.borderWidth, relief=value.relief)
 
     def setTooltip(self, tip):

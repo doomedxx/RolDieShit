@@ -1,6 +1,6 @@
 from tkinter import *
 
-import Controller.maxtemp_controller as controller
+import Controller.maxlight_controller as controller
 import Frame.mainframe as mainframe
 import View.Settings.setting_values as value
 
@@ -9,7 +9,7 @@ class lightgraphSetting(object):
 
     mainframe.widgetList.append("closetemp")
     def __init__(self):
-        self.color = "chocolate"
+        self.color = "gray30"
         self.lightGraphSettingPosY = 70
         self.lightGraphSetting = Frame(mainframe.root, relief=SUNKEN)
 
@@ -28,7 +28,7 @@ class lightgraphSetting(object):
 
     def addBlock(self):
         self.lightGraphSetting.pack(side=LEFT)
-        self.lightGraphSetting.place(height=value.widgetHeight, width=value.widgetWidth, x=550, y=self.lightGraphSettingPosY)
+        self.lightGraphSetting.place(height=value.widgetHeight, width=value.widgetWidth, x=375, y=self.lightGraphSettingPosY)
         self.lightGraphSetting.config(bg=self.color,borderwidth= value.borderWidth, relief=value.relief)
 
     def setTooltip(self, tip):

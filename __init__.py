@@ -11,11 +11,12 @@ from View import toolbar
 from View import widgetValues
 from View.Settings import setting_clock
 from View.Settings import setting_mintemp
-from View.Settings import setting_maxtemp
+from View.Settings import setting_maxlight
 from View.Settings import setting_theme
 from View.Settings import setting_values
 from View.Settings import settings_officehours
-from View.Settings import graphLight
+from View.Settings import setting_graphLight
+from View.Settings import setting_graphTemp
 
 closed = False
 def kill():

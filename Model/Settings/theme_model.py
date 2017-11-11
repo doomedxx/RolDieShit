@@ -9,6 +9,7 @@ def lightTransition():
         f.root.after(10, lightTransition)
         f.root.configure(background='gray{}'.format(color))
         f.VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="gray5")
+        f.Username.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="gray5")
         color+=3
 
 def darkTransition():
@@ -17,6 +18,7 @@ def darkTransition():
         f.root.after(10, darkTransition)
         f.root.configure(background='gray{}'.format(color))
         f.VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="white")
+        f.Username.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="white")
         color-=3
 
 def onEnterScript():
