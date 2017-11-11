@@ -9,7 +9,7 @@ class opentempsetting(object):
     mainframe.widgetList.append("opentemp")
     def __init__(self):
         self.opentemp = 27
-        self.opentempsettingPosX = 655
+        self.opentempsettingPosX = 550
         self.opentempsettingPosY = 320
         self.opentempsetting = Frame(mainframe.root, relief=SUNKEN)
 
@@ -60,7 +60,7 @@ class opentempsetting(object):
 
     def addBlock(self):
         self.opentempsetting.pack(side=LEFT)
-        self.opentempsetting.place(height=value.settingHeight, width=value.settingWidth, x=200, y=self.opentempsettingPosY)
+        self.opentempsetting.place(height=value.settingHeight, width=value.settingWidth, x=self.opentempsettingPosX, y=self.opentempsettingPosY)
         self.opentempsetting.config(bg=value.settingsBackground,borderwidth= value.borderWidth, relief=value.relief)
 
     def setTooltip(self, tip):

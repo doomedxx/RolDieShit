@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="setting_graphLight.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Settings/setting_graphLight.py">
+      <file leaf-file-name="setting_openlight.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Settings/setting_openlight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
+            <state relative-caret-position="308">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -27,40 +27,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="widgetValues.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/View/widgetValues.py">
+      <file leaf-file-name="setting_closelight.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/View/Settings/setting_closelight.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graphcontroller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/graphcontroller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="graph_Model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/graph_Model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting_maxlight.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Settings/setting_maxlight.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-374">
+            <state relative-caret-position="170">
               <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -69,13 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setting_mintemp.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/Settings/setting_mintemp.py">
+      <file leaf-file-name="toolbar_model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="47" column="105" lean-forward="false" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
+            <state relative-caret-position="267">
+              <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
               <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,7 +62,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>tk</find>
       <find>#707a75</find>
       <find>#9a9ca0</find>
       <find>#3f4042</find>
@@ -122,9 +91,9 @@
       <find>clock</find>
       <find>y=35</find>
       <find>X</find>
+      <find>close</find>
     </findStrings>
     <replaceStrings>
-      <replace>text='Status: '</replace>
       <replace>IndianRed1</replace>
       <replace>sienna1</replace>
       <replace>view</replace>
@@ -154,6 +123,7 @@
       <replace>temp</replace>
       <replace>value.tipY</replace>
       <replace>Y</replace>
+      <replace>open</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\wesle\IdeaProjects\GUI\Widgets</dir>
@@ -170,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/View_Widgets/setting_clock.py" />
         <option value="$PROJECT_DIR$/View_Widgets/light.py" />
         <option value="$PROJECT_DIR$/Controller/light_controller.py" />
         <option value="$PROJECT_DIR$/View_Widgets/clock.py" />
@@ -198,11 +167,9 @@
         <option value="$PROJECT_DIR$/Model/light_model.py" />
         <option value="$PROJECT_DIR$/Controller/maxlight_controller.py" />
         <option value="$PROJECT_DIR$/View/Settings/graphLight.py" />
-        <option value="$PROJECT_DIR$/Model/toolbar_model.py" />
         <option value="$PROJECT_DIR$/Frame/mainframe.py" />
         <option value="$PROJECT_DIR$/Model/practice.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_values.py" />
-        <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/Model/Settings/office_model.py" />
         <option value="$PROJECT_DIR$/Model/Settings/maxlight_model.py" />
         <option value="$PROJECT_DIR$/Controller/office_controller.py" />
@@ -212,15 +179,18 @@
         <option value="$PROJECT_DIR$/Model/Settings/mintemp_model.py" />
         <option value="$PROJECT_DIR$/Model/clock_model.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_theme.py" />
-        <option value="$PROJECT_DIR$/View/Settings/settings_officehours.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_clock.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_maxlight.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_graphTemp.py" />
         <option value="$PROJECT_DIR$/Model/graph_Model.py" />
         <option value="$PROJECT_DIR$/Controller/graphcontroller.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_graphLight.py" />
-        <option value="$PROJECT_DIR$/View/Settings/setting_mintemp.py" />
         <option value="$PROJECT_DIR$/View/widgetValues.py" />
+        <option value="$PROJECT_DIR$/View/Settings/settings_officehours.py" />
+        <option value="$PROJECT_DIR$/View/Settings/setting_mintemp.py" />
+        <option value="$PROJECT_DIR$/__init__.py" />
+        <option value="$PROJECT_DIR$/View/Settings/setting_openlight.py" />
+        <option value="$PROJECT_DIR$/Model/toolbar_model.py" />
       </list>
     </option>
   </component>
@@ -270,17 +240,6 @@
               <item name="RolDieShit" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RolDieShit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RolDieShit" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RolDieShit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RolDieShit" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
-              <item name="Settings" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -292,18 +251,18 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View\Settings" />
-      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View" />
-      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Controller" />
-      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Model" />
-      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View_Settings" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Model" />
       <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View\Settings" />
       <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Model\Settings" />
       <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View_Widgets" />
+      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View_Settings" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View\Settings" />
+      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View" />
+      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Controller" />
+      <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\Model" />
       <recent name="C:\Users\wesle\IdeaProjects\RolDieShit\View_Settings" />
     </key>
   </component>
@@ -595,7 +554,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frame.py" />
     <entry file="file://$PROJECT_DIR$/Widgets/widget_control.py" />
     <entry file="file://$PROJECT_DIR$/creategui.py" />
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/tkinter/__init__.py">
@@ -740,16 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="38" column="45" lean-forward="false" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#31#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/practice.py" />
     <entry file="file://$PROJECT_DIR$/Model/light_model.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -763,14 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding />
         </state>
       </provider>
@@ -855,16 +795,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Settings/settings_officehours.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="69" column="46" lean-forward="false" selection-start-line="69" selection-start-column="46" selection-end-line="69" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#21#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/clock_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -913,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/Settings/setting_maxlight.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-374">
-          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/Settings/setting_graphLight.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -933,10 +853,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/View/widgetValues.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/View/Settings/setting_mintemp.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="47" column="105" lean-forward="false" selection-start-line="47" selection-start-column="105" selection-end-line="47" selection-end-column="105" />
+        <state relative-caret-position="289">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
@@ -951,11 +879,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/widgetValues.py">
+    <entry file="file://$PROJECT_DIR$/View/Settings/settings_officehours.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="23" lean-forward="false" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="153">
+          <caret line="13" column="34" lean-forward="false" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Settings/setting_openlight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/Settings/setting_closelight.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/toolbar_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="25" column="41" lean-forward="false" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,4 +1,4 @@
-from View.Settings import setting_maxlight as max
+from View.Settings import setting_closelight as max
 
 light = 50
 

@@ -11,7 +11,8 @@ from View import toolbar
 from View import widgetValues
 from View.Settings import setting_clock
 from View.Settings import setting_mintemp
-from View.Settings import setting_maxlight
+from View.Settings import setting_closelight
+from View.Settings import setting_openlight
 from View.Settings import setting_theme
 from View.Settings import settings_officehours
 from View.Settings import setting_graphLight

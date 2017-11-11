@@ -11,7 +11,7 @@ class officehourssetting(object):
     def __init__(self):
 
         self.officetemp = 23
-        self.officesettingPosX = 655
+        self.officesettingPosX = 555
         self.officesettingPosY = 70
         self.officesetting = Frame(mainframe.root, relief=SUNKEN)
 
@@ -78,7 +78,7 @@ class officehourssetting(object):
 
     def addBlock(self):
         self.officesetting.pack(side=LEFT)
-        self.officesetting.place(height=value.settingHeight, width=value.settingWidth, x=550, y=self.officesettingPosY)
+        self.officesetting.place(height=value.settingHeight, width=value.settingWidth, x=self.officesettingPosX, y=self.officesettingPosY)
         self.officesetting.config(bg=value.settingsBackground,borderwidth= value.borderWidth, relief=value.relief)
 
     def setTooltip(self, tip):
