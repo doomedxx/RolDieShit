@@ -1,6 +1,6 @@
 from tkinter import *
 
-import Controller.maxlight_controller as controller
+import Controller.light_open_controller as controller
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 
@@ -29,21 +29,28 @@ class openlightsetting(object):
         self.lightIncrement = Button(self.openlightWidget)
         self.lightIncrement.config(text="+", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightIncrement.place(x=118, y=value.settingHeight - 80)
-        self.lightIncrement.bind("<Button-1>", controller.increaselightGo)
+        self.lightIncrement.bind("<Button-1>", controller.increaselightOpenGo)
 
         self.lightDecrease = Button(self.openlightWidget)
         self.lightDecrease.config(text="-", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightDecrease.place(x=12, y=value.settingHeight - 80)
-        self.lightDecrease.bind("<Button-1>", controller.decreaselightGo)
+        self.lightDecrease.bind("<Button-1>", controller.decreaselightOpenGo)
 
         self.lightsettingTip = Label(self.openlightWidget)
-        self.lightsettingTip.config(text="At what light level should \nthe rollucks close?", font=value.tipFont, bg=value.tipBackground, fg=value.settingtitleColor, anchor="c")
+        self.lightsettingTip.config(text="At what light level should \nthe rollucks open?", font=value.tipFont, bg=value.tipBackground, fg=value.settingtitleColor, anchor="c")
         self.lightsettingTip.pack()
         self.lightsettingTip.place(x=0, y=value.tipY, width=150)
 
         self.openlightWarning = Label(self.openlightWidget)
         self.openlightWarning.config(text="",font=("DIN-bold", 8), bg=value.settingsBackground, fg=value.tipColor)
         self.openlightWarning.place(x=38, y=value.settingHeight - 40)
+
+    def setlight(self, lighterature):
+        self.maxlight = lighterature
+        self.lightValue.config(text=lighterature, font=value.settingInformationFont, bg=value.settingsBackground, fg=value.settingtitleColor)
+
+    def getlight(self):
+        return self.maxlight
 
     def addBlock(self):
         self.openlightWidget.pack(side=LEFT)

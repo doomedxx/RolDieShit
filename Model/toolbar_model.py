@@ -18,7 +18,7 @@ def executeSettings():
     view.rollercontrol.r1.rollerWidget.place_forget()
     settings.settings_officehours.office1.addBlock()
     settings.setting_theme.t1.addBlock()
-    settings.setting_closelight.max1.addBlock()
+    settings.setting_closelight.close1.addBlock()
     settings.setting_mintemp.min1.addBlock()
     settings.setting_clock.c1.addBlock()
     settings.setting_graphLight.l1.addBlock()

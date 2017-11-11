@@ -1,6 +1,6 @@
 from tkinter import *
 
-import Controller.maxlight_controller as controller
+import Controller.light_close_controller as controller
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 
@@ -29,12 +29,12 @@ class closelightsetting(object):
         self.lightIncrement = Button(self.closelightWidget)
         self.lightIncrement.config(text="+", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightIncrement.place(x=118, y=value.settingHeight - 80)
-        self.lightIncrement.bind("<Button-1>", controller.increaselightGo)
+        self.lightIncrement.bind("<Button-1>", controller.increaselightCloseGo)
 
         self.lightDecrease = Button(self.closelightWidget)
         self.lightDecrease.config(text="-", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightDecrease.place(x=12, y=value.settingHeight - 80)
-        self.lightDecrease.bind("<Button-1>", controller.decreaselightGo)
+        self.lightDecrease.bind("<Button-1>", controller.decreaselightCloseGo)
 
         self.lightsettingTip = Label(self.closelightWidget)
         self.lightsettingTip.config(text="At what light level should \nthe rollucks close?", font=value.tipFont, bg=value.tipBackground, fg=value.settingtitleColor, anchor="c")
@@ -60,4 +60,4 @@ class closelightsetting(object):
     def setTooltip(self, tip):
         self.lightTip.config(text=tip, font=value.tipFont, bg=value.settingsBackground, fg=value.tipColor)
 
-max1 = closelightsetting()
+close1 = closelightsetting()

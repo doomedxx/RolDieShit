@@ -1,6 +1,6 @@
 from tkinter import *
 
-import Controller.maxlight_controller as controller
+import Controller.light_close_controller as controller
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 
