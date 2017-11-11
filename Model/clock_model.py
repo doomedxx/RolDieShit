@@ -3,7 +3,6 @@ import Frame.mainframe as frame
 from View import clock as clock
 from View.Settings import setting_clock as clock_setting
 
-timeMode = "12-hour"
 time_string = time.strftime('%H:%M:%S')
 def updateClock():
     frame.root.after(1000, setTime)
@@ -20,12 +19,3 @@ def setTime():
 
 def getTime():
     return time_string
-
-def onEnterScript():
-    clock_setting.c1.setTooltip("Change clock format")
-
-def onLeaveScript():
-    clock_setting.c1.setTooltip("")
-
-def go12():
-    print("Werkt")

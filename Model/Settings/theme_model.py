@@ -20,9 +20,3 @@ def darkTransition():
         f.VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="white")
         f.Username.config(text="Version 0.2", font=("DIN-bold", 8), bg='gray{}'.format(color),  fg="white")
         color-=3
-
-def onEnterScript():
-    theme.t1.setTooltip("Change the appearance of \n the interface")
-
-def onLeaveScript():
-    theme.t1.setTooltip("")

@@ -5,3 +5,14 @@ def getTools():
 
 def releaseTools():
     view.g3.graphWidget3Tool.place_forget()
+
+def increaselightX():
+    pass
+def decreaselightX():
+    pass
+
+def increaselightY():
+    pass
+
+def decreaselightY():
+    pass

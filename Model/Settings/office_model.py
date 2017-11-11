@@ -5,7 +5,7 @@ from View.Settings import settings_officehours as office
 ## ALLES IS HARTSTIKKE OMSLACHTIG EN KAN NETTER. #########################
 ##########################################################################
 def onEnterScript():
-    office.office1.setTooltip("Rollucks will close outside\nthese hours")
+    office.office1.setTooltip("Rollucks will close \noutside these hours")
 
 
 def onLeaveScript():

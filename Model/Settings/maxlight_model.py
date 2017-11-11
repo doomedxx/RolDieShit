@@ -29,8 +29,5 @@ def decreaseLight():
 def setWarning(warning):
     max.max1.closelightWarning.config(text=warning)
 
-def onEnterScript():
-    max.max1.setTooltip("At what light level should \n the rollucks close?")
-
 def onLeaveScript():
     max.max1.setTooltip("")

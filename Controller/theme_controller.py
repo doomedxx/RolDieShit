@@ -6,9 +6,3 @@ def goDark(event):
 
 def goLight(event):
     f.root.after(1, model.lightTransition)
-
-def onEnter(event):
-    model.onEnterScript()
-
-def onLeave(event):
-    model.onLeaveScript()

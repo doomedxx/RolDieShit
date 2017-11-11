@@ -26,9 +26,3 @@ def decreaseTemp():
 
 def setWarning(warning):
     min.min1.opentempWarning.config(text=warning)
-
-def onEnterScript():
-    min.min1.setTooltip("At what temperature should \n the rollucks open?")
-
-def onLeaveScript():
-    min.min1.setTooltip("")
