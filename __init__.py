@@ -15,14 +15,17 @@ from View.Settings import setting_maxtemp
 from View.Settings import setting_theme
 from View.Settings import setting_values
 from View.Settings import settings_officehours
+from View.Settings import graphLight
 
+closed = False
 def kill():
     print("Dashboard is gesloten")
+    global closed
+    closed = True
     mainframe.root.destroy()
 
 mainframe.root.protocol('WM_DELETE_WINDOW', kill)  # root is your root window
 
-
-def main():
+while not closed:
     mainframe.mainloop()
-main()
+

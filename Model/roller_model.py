@@ -1,7 +1,6 @@
 from View import rollercontrol as view
 from tkinter import *
-from time import sleep
-import threading
+from Frame import mainframe as mainframe
 rollucks = {1:"Open", 2:"Closed", 3:"Open"}
 
 def close(rollID):
@@ -21,13 +20,13 @@ def rollToggleStart(rolluck):
         eval("view.r1.rollerLabel" + str(rolluck) + "Status.config" + "(text='Status: in motion')")
         eval("view.r1.rollerStatus" + str(rolluck) + ".config(image=view.r1.motionImage)")
         eval("view.r1.roller" + str(rolluck) + "Toggle.config(state=DISABLED)")
-        threading.Timer(3, close, [rolluck]).start()
+        mainframe.root.after(3000, close, rolluck)
 
     elif rollucks[rolluck] == "Closed":
         eval("view.r1.rollerLabel" + str(rolluck) + "Status.config" + "(text='Status: in motion')")
         eval("view.r1.rollerStatus" + str(rolluck) + ".config(image=view.r1.motionImage)")
         eval("view.r1.roller" + str(rolluck) + "Toggle.config(state=DISABLED)")
-        threading.Timer(3, open, [rolluck]).start()
+        mainframe.root.after(3000, open, rolluck)
 
 def All(toggle):
     for k in rollucks.keys():

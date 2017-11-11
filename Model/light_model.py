@@ -1,14 +1,12 @@
 from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
-from Model.clock_model import getTime as currentTime
-import threading
 import random
 
 lightNum = 50
 def updateTick():
     global lightNum
-    f.root.after(100, updateTick)
+    f.root.after(500, updateTick)
     upordown = random.randint(0,1)
     if upordown == 0:
         lightNum-=2
@@ -50,11 +48,14 @@ def updateGraph(light):
     cycle+=1
     average = round(sum(graph.g3.y) / len(graph.g3.y))
     averageList.append(average)
-    print(len(graph.g3.x))
     if cycle >= 11:
         graph.g3.line2.set_xdata(graph.g3.x)
         graph.g3.line2.set_ydata(averageList)
 
+    if cycle > 100: ## Zorgt ervoor dat oude data word verwijderd. Om performance issues tegen te gaan
+        averageList.pop(0)
+        graph.g3.x.pop(0)
+        graph.g3.y.pop(0)
 
     graph.g3.line.set_ydata(graph.g3.y)
     graph.g3.line.set_xdata(graph.g3.x)

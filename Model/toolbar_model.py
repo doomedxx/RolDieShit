@@ -22,6 +22,7 @@ def executeSettings():
     settings.setting_maxtemp.max1.addBlock()
     settings.setting_mintemp.min1.addBlock()
     settings.setting_clock.c1.addBlock()
+    settings.graphLight.l1.addBlock()
 
     toolview.w1.menuButton2.config(fg="white")
     toolview.w1.Selected.place(x=660, y=46)
@@ -29,6 +30,7 @@ def executeSettings():
     toolview.w1.Selected.config(text="............................................................................................................................")
     selected = "settings"
     color = 60
+
 def executeView():
     global selected
     global color
@@ -37,6 +39,7 @@ def executeView():
     settings.setting_mintemp.min1.opentempsetting.place_forget()
     settings.setting_clock.c1.clocksettingwidget.place_forget()
     settings.settings_officehours.office1.officesetting.place_forget()
+    settings.graphLight.l1.lightGraphSetting.place_forget()
 
     view.control.replace()
     view.graph1.replace()

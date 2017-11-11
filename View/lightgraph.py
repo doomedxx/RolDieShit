@@ -3,7 +3,6 @@ matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 import matplotlib.pyplot as plt
 from Controller import graphcontroller as controller
-import numpy as np
 
 from tkinter import *
 
@@ -15,7 +14,7 @@ class graphwidget3(object):
     graphWidget3 = Frame(mainframe.root, relief=SUNKEN)
     graphWidget3Tool = Frame(mainframe.root, relief=SUNKEN)
 
-    f = plt.figure(figsize=(110,90), dpi=70, facecolor='#65686d', edgecolor="white")
+    f = plt.figure(figsize=(10,10), dpi=70, facecolor='#65686d', edgecolor="white")
     a = f.add_subplot(1,1,1)
     x = [0,0,0,0,0,0,0,0,0,0,0]
     y = [0,0,0,0,0,0,0,0,0,0,0]

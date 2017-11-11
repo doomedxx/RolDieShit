@@ -1,5 +1,5 @@
 from View_Widgets import light as view
-from Serial import *											//import				
+from Serial import *											//import
 import Frame.mainframe as f
 import threading
 import random

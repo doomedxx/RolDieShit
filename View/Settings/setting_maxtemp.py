@@ -14,43 +14,37 @@ class closetempsetting(object):
         self.closetempWidgetPosX = 655
         self.closetempWidgetPosY = 70
         self.closetempWidget = Frame(mainframe.root, relief=SUNKEN)
+
         self.closetempWidget.bind("<Enter>", controller.onEnter)
         self.closetempWidget.bind("<Leave>", controller.onLeave)
 
         self.maxLabel = Label(self.closetempWidget)
         self.maxLabel.config(text="CLOSING TEMP", font=value.titleFont, bg=self.color, fg=value.titleColor)
-        self.maxLabel.pack()
         self.maxLabel.place(x=10, y=1)
 
         self.maxTip = Label(self.closetempWidget)
         self.maxTip.config(text="", font=value.tipFont, bg=self.color, fg=value.titleColor)
-        self.maxTip.pack()
         self.maxTip.place(x=2, y=30)
 
         self.maxValue = Label(self.closetempWidget)
         self.maxValue.config(text=self.maxtemp, font=value.informationFont, bg=self.color, fg=value.titleColor)
-        self.maxValue.pack()
         self.maxValue.place(x=35, y=value.widgetHeight - 95)
 
         self.C = Label(self.closetempWidget)
         self.C.config(text="C", font=value.informationFont, bg=self.color, fg=value.titleColor)
-        self.C.pack()
         self.C.place(x=85, y=value.widgetHeight - 95)
 
         self.maxIncrement = Button(self.closetempWidget)
         self.maxIncrement.config(text="+",font=("DIN-bold", 13), bg="gray25", fg=value.titleColor, height=-10, width=1)
-        self.maxIncrement.pack()
         self.maxIncrement.place(x=118, y=value.widgetHeight - 80)
         self.maxIncrement.bind("<Button-1>", controller.increaseTempGo)
 
         self.closetempWarning = Label(self.closetempWidget)
         self.closetempWarning.config(text="",font=("DIN-bold", 8), bg=self.color, fg="gold")
-        self.closetempWarning.pack()
         self.closetempWarning.place(x=20, y=value.widgetHeight - 40)
 
         self.minIncrement = Button(self.closetempWidget)
         self.minIncrement.config(text="-",font=("DIN-bold", 13), bg="gray25", fg=value.titleColor, height=-10, width=1)
-        self.minIncrement.pack()
         self.minIncrement.place(x=12, y=value.widgetHeight - 80)
         self.minIncrement.bind("<Button-1>", controller.decreaseTempGo)
 

@@ -1,5 +1,4 @@
 import time
-import builtins
 import Frame.mainframe as frame
 from View import clock as clock
 from View.Settings import setting_clock as clock_setting
