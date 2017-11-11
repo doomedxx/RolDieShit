@@ -1,30 +1,41 @@
 from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
+from Model.clock_model import getTime as currentTime
+import threading
 import random
 
-lightNum = 50
+try:
+    ser = Serial(
+        port='COM3',
+        baudrate=19200,
+        parity=PARITY_NONE,
+        stopbits=STOPBITS_ONE,
+        bytesize=EIGHTBITS,
+        timeout=0)
+except:
+    print("Disconnected")
+
 def updateTick():
-    global lightNum
-    f.root.after(500, updateTick)
-    upordown = random.randint(0,1)
-    if upordown == 0:
-        lightNum-=2
-    else:
-        lightNum+=2
-    if lightNum >= 100:
-        lightNum = 95
-    if lightNum <= 0:
-        lightNum = 5
-    checkPreset(lightNum)
-    updateGraph(lightNum)
-    view.l1.lightLabelCount.config(text="{}%".format(lightNum))
+    f.root.after(1000, updateTick)
+    try:
+        value = ser.read()
+        min = 25                #min light value
+        max = 50                #max light value
+        if value:
+            lightNum = int.from_bytes(value, byteorder='little')
+            print(lightNum)
+            lightToPercentage = round((lightNum - min) * 100 / (max - min))
+            #print(lightToPercentage)
+            view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
+            checkPreset(lightToPercentage)
+            updateGraph(lightToPercentage)
+    except:
+        view.l1.lightLabelCount.config(text="N/A")
+        view.l1.lightLabelPreset.config(text="[Restart]")
+
 
 def checkPreset(light):
-    if light < -10:
-        view.l1.lightLabelPreset.config(text="[ Get help! ]")
-    elif light < 0:
-        view.l1.lightLabelPreset.config(text="[ Wtf!? ]")
     if light >= 0 and light <= 20:
         view.l1.lightLabelPreset.config(text="[Very Dark]")
     elif light >= 20 and light < 40:
@@ -48,14 +59,11 @@ def updateGraph(light):
     cycle+=1
     average = round(sum(graph.g3.y) / len(graph.g3.y))
     averageList.append(average)
+    print(len(graph.g3.x))
     if cycle >= 11:
         graph.g3.line2.set_xdata(graph.g3.x)
         graph.g3.line2.set_ydata(averageList)
 
-    if cycle > 100: ## Zorgt ervoor dat oude data word verwijderd. Om performance issues tegen te gaan
-        averageList.pop(0)
-        graph.g3.x.pop(0)
-        graph.g3.y.pop(0)
 
     graph.g3.line.set_ydata(graph.g3.y)
     graph.g3.line.set_xdata(graph.g3.x)
