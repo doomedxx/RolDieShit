@@ -1,7 +1,6 @@
 from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
-from serial import *
 from Model.clock_model import getTime as currentTime
 import threading
 import random
@@ -22,7 +21,7 @@ def updateTick():
     try:
         value = ser.read()
         min = 25                #min light value
-        max = 60                #max light value
+        max = 50                #max light value
         if value:
             lightNum = int.from_bytes(value, byteorder='little')
             print(lightNum)
