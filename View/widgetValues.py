@@ -21,9 +21,9 @@ font = "DIN-bold"
 settingHeight = 220
 settingWidth = 150
 
-settingsBackground = "royal blue3"         ## Change background of Widget Blocks
+settingsBackground = "gray40"         ## Change background of Widget Blocks
 
-tipBackground = "royal blue4"
+tipBackground = "gray20"
 tipY= 30
 
 settingtitleColor = 'white'             ## Change header font color
