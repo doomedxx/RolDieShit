@@ -24,9 +24,9 @@ class clockwidget(tk.Tk):
         self.clockLabelTime.place(x=2, y=53)
 
         self.clockLabelDay = Label(self.clockWidget, text="LOADING")
-        self.clockLabelDay.config(font=("DIN-bold", 14), bg=self.color, fg=value.indicatorColor,anchor="w")
+        self.clockLabelDay.config(font=("DIN-bold", 14), bg=self.color, fg=value.indicatorColor, justify=CENTER)
         self.clockLabelDay.pack()
-        self.clockLabelDay.place(width=105,x=2, y=33)
+        self.clockLabelDay.place(x=2, y=33)
 
         self.clockLabel = Label(self.clockWidget)
         self.clockLabel.config(text="TIME",font=value.titlefont, bg=self.color, fg=value.titleColor)

@@ -1,6 +1,5 @@
 from Model import toolbar_model as model
 
-
 def goSettings(event):
     model.executeSettings()
 

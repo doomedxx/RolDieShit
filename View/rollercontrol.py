@@ -41,7 +41,7 @@ class rollerwidget(object):
     roller1Toggle.config(font=(value.font, 8), bg="royalblue", fg="white")
     roller1Toggle.pack()
     roller1Toggle.place(x=150, y=38)
-    roller1Toggle.bind("<Button-1>", lambda event:  controller.rollToggle(1))
+    roller1Toggle.bind("<Button-1>", lambda event: controller.rollToggle(1))
 
     rollerStatus1 = Label(rollerWidget, image=openImage, bg=widgetBackground)
     rollerStatus1.pack()
@@ -87,7 +87,7 @@ class rollerwidget(object):
     roller3Toggle.place(x=150, y=118)
     roller3Toggle.bind("<Button-1>",lambda event:  controller.rollToggle(3))
 
-def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
+def replace():
     r1.rollerWidget.place(height=150, width=300, x=25, y=410)
 
 r1 = rollerwidget()

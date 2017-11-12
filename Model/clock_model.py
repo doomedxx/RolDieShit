@@ -1,28 +1,26 @@
-import time
-import Frame.mainframe as frame
+from View import setting_clock as clock_setting
 from View import clock as clock
-from View.Settings import setting_clock as clock_setting
+import Frame.mainframe as frame
+import time
+import threading
 
-time_string = time.strftime('%H:%M:%S')
+timeMode = "12-hour"
 
-
-def setTime(): ##
+def updateClock():
     frame.root.after(1000, setTime)
-    global time_string
+
+def setTime():
     time_day = time.strftime('%A')
     time_string = time.strftime('%H:%M:%S')
     clock.c.clockLabelTime.config(text=time_string)
     clock.c.clockLabelDay.config(text=time_day)
-    getTime()
+    updateClock()
 
+def onEnterScript():
+    clock_setting.c1.setTooltip("Change clock format")
 
-def getTime():
-    return time_string
+def onLeaveScript():
+    clock_setting.c1.setTooltip("")
 
-def getHour():
-    hour_string = time.strftime('%H')
-    return hour_string
-
-def getMinute():
-    minute_string = time.strftime('%M')
-    return minute_string
+def go12():
+    print("Werkt")

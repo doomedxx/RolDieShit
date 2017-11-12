@@ -1,7 +1,7 @@
-import Frame.mainframe as frame
 import View as view
-import View.Settings as settings
 from View import toolbar as toolview
+import Frame.mainframe as frame
+import threading
 
 selected = "view"
 color = 60
@@ -12,18 +12,16 @@ def executeSettings():
     view.control.c1.controlWidget.place_forget()
     view.light.l1.lightWidget.place_forget()
     view.temperature.t1.tempWidget.place_forget()
-    view.lightgraph.g3.graphWidget3.place_forget()
+    view.graph3.g3.graphWidget3.place_forget()
     view.graph2.g2.graphWidget2.place_forget()
     view.graph1.g1.graphWidget.place_forget()
     view.rollercontrol.r1.rollerWidget.place_forget()
-    settings.settings_officehours.office1.addBlock()
-    settings.setting_theme.t1.addBlock()
-    settings.setting_closelight.close1.addBlock()
-    settings.setting_mintemp.min1.addBlock()
-    settings.setting_clock.c1.addBlock()
-    settings.setting_graphLight.l1.addBlock()
-    settings.setting_graphTemp.t1.addBlock()
-    settings.setting_openlight.open1.addBlock()
+
+    view.settings_officehours.office1.addBlock()
+    view.setting_theme.t1.addBlock()
+    view.setting_maxtemp.max1.addBlock()
+    view.setting_mintemp.min1.addBlock()
+    view.setting_clock.c1.addBlock()
 
     toolview.w1.menuButton2.config(fg="white")
     toolview.w1.Selected.place(x=660, y=46)
@@ -31,23 +29,19 @@ def executeSettings():
     toolview.w1.Selected.config(text="............................................................................................................................")
     selected = "settings"
     color = 60
-
 def executeView():
     global selected
     global color
-    settings.setting_theme.t1.themeWidget.place_forget()
-    settings.setting_closelight.close1.closelightWidget.place_forget()
-    settings.setting_mintemp.min1.opentempsetting.place_forget()
-    settings.setting_clock.c1.clocksettingwidget.place_forget()
-    settings.settings_officehours.office1.officesetting.place_forget()
-    settings.setting_graphLight.l1.lightGraphSetting.place_forget()
-    settings.setting_graphTemp.t1.tempGraphSetting.place_forget()
-    settings.setting_openlight.open1.openlightWidget.place_forget()
+    view.setting_theme.t1.themeWidget.place_forget()
+    view.setting_maxtemp.max1.closetempWidget.place_forget()
+    view.setting_mintemp.min1.opentempsetting.place_forget()
+    view.setting_clock.c1.clocksettingwidget.place_forget()
+    view.settings_officehours.office1.officesetting.place_forget()
 
     view.control.replace()
     view.graph1.replace()
     view.graph2.replace()
-    view.lightgraph.replace()
+    view.graph3.replace()
     view.clock.replace()
     view.rollercontrol.replace()
     view.temperature.replace()

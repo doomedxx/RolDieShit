@@ -1,4 +1,9 @@
-import Model.Settings.office_model as model
+import time
+import threading
+import Model.office_model as model
+
+def onEnter(event):
+    model.onEnterScript()
 
 def increaseOpenTime(event):
     model.increaseOpenTimeScript()
@@ -11,3 +16,8 @@ def increaseCloseTime(event):
 
 def decreaseCloseTime(event):
     model.decreaseCloseTimeScript()
+
+
+
+def onLeave(event):
+    model.onLeaveScript()
