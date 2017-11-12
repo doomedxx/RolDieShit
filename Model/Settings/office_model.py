@@ -12,7 +12,7 @@ def onLeaveScript():
     office.office1.setTooltip("")
 
 
-closehour = 23
+closehour = 17
 closeminute = 0
 openhour = 8
 openminute = 0
@@ -89,3 +89,37 @@ def decreaseCloseTimeScript():
         closeminute = 30
         time = "{}:{}".format(closehour, closeminute)
     office.office1.officeCloseValue.config(text=time)
+
+def getOpenTime():
+    from Model import clock_model as clock
+    hour = int(clock.getHour())
+    minute = int(clock.getMinute())
+    if hour >= openhour:
+        if hour <= closehour:
+            if openminute == 0:
+                if hour >= openhour & minute >= openminute:
+                    return True
+            elif openminute == 30:
+                    if hour > openhour:
+                        return True
+                    elif hour == openhour:
+                        if minute >= openminute:
+                            return True
+
+
+def getCloseTime():
+    from Model import clock_model as clock
+    hour = int(clock.getHour())
+    minute = int(clock.getMinute())
+    if closeminute == 0:
+        if hour < closehour:
+            return True
+        elif hour == closehour:
+            if minute <= closeminute:
+                return True
+    if closeminute == 30:
+        if hour < closehour:
+            return True
+        elif hour == closehour:
+            if minute <= closeminute:
+              return True
