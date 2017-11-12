@@ -1,5 +1,6 @@
 import Frame.mainframe as f
 from View.Settings import setting_theme as theme
+from View import widgetValues as value
 
 color = 16
 

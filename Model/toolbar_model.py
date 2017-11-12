@@ -36,12 +36,13 @@ def executeView():
     global selected
     global color
     settings.setting_theme.t1.themeWidget.place_forget()
-    settings.setting_closelight.max1.closelightWidget.place_forget()
+    settings.setting_closelight.close1.closelightWidget.place_forget()
     settings.setting_mintemp.min1.opentempsetting.place_forget()
     settings.setting_clock.c1.clocksettingwidget.place_forget()
     settings.settings_officehours.office1.officesetting.place_forget()
     settings.setting_graphLight.l1.lightGraphSetting.place_forget()
     settings.setting_graphTemp.t1.tempGraphSetting.place_forget()
+    settings.setting_openlight.open1.openlightWidget.place_forget()
 
     view.control.replace()
     view.graph1.replace()

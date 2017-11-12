@@ -1,6 +1,9 @@
 from tkinter import *
 
-import Controller.graphcontroller as controller
+from Controller.graphlight_controller import increaselightXGo as increaseX
+from Controller.graphlight_controller import increaselightYGo as increaseY
+from Controller.graphlight_controller import decreaselightXGo as decreaseX
+from Controller.graphlight_controller import decreaselightXGo as decreaseY
 import Frame.mainframe as mainframe
 import View.widgetValues as value
 
@@ -28,12 +31,12 @@ class lightgraphSetting(object):
         self.lightXIncrement = Button(self.lightGraphSetting)
         self.lightXIncrement.config(text="+", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightXIncrement.place(x=118, y=value.settingHeight - 130)
-        self.lightXIncrement.bind("<Button-1>", controller.increaselightXGo)
+        self.lightXIncrement.bind("<Button-1>", increaseX)
 
         self.lightXDecrease = Button(self.lightGraphSetting)
         self.lightXDecrease.config(text="-", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
         self.lightXDecrease.place(x=12, y=value.settingHeight - 130)
-        self.lightXDecrease.bind("<Button-1>", controller.decreaselightXGo)
+        self.lightXDecrease.bind("<Button-1>", decreaseX)
 
         self.Xlabel = Label(self.lightGraphSetting)
         self.Xlabel.config(text="X-axis", font=value.tipFont, bg=value.settingsBackground, fg=value.settingtitleColor, anchor="c")
@@ -41,21 +44,21 @@ class lightgraphSetting(object):
 
         self.lightYValue = Label(self.lightGraphSetting)
         self.lightYValue.config(text="100", font=value.settingInformationFont, bg=value.settingsBackground, fg=value.settingtitleColor, anchor="c")
-        self.lightYValue.place(x=35, y=140, width = 75)
+        self.lightYValue.place(x=35, y=150, width = 75)
 
         self.lightYIncrement = Button(self.lightGraphSetting)
         self.lightYIncrement.config(text="+", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
-        self.lightYIncrement.place(x=118, y=155)
-        self.lightYIncrement.bind("<Button-1>", controller.increaselightYGo)
+        self.lightYIncrement.place(x=118, y=165)
+        self.lightYIncrement.bind("<Button-1>", increaseY)
 
         self.lightYDecrease = Button(self.lightGraphSetting)
         self.lightYDecrease.config(text="-", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
-        self.lightYDecrease.place(x=12, y=155)
-        self.lightYDecrease.bind("<Button-1>", controller.decreaselightYGo)
+        self.lightYDecrease.place(x=12, y=165)
+        self.lightYDecrease.bind("<Button-1>", decreaseY)
 
         self.Ylabel = Label(self.lightGraphSetting)
         self.Ylabel.config(text="Y-axis", font=value.tipFont, bg=value.settingsBackground, fg=value.settingtitleColor, anchor="c")
-        self.Ylabel.place(x=35, y=130, width = 75)
+        self.Ylabel.place(x=35, y=140, width = 75)
 
 
     def addBlock(self):

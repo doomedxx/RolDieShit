@@ -2,7 +2,7 @@ import matplotlib
 matplotlib.use("TkAgg")
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2TkAgg
 import matplotlib.pyplot as plt
-from Controller import graphcontroller as controller
+from Controller import graphlight_controller as controller
 
 from tkinter import *
 
