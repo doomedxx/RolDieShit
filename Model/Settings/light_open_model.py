@@ -1,7 +1,7 @@
 from View.Settings import setting_closelight as close
 from View.Settings import setting_openlight as open
 
-light = 50
+light = 70
 
 def increaseLightOpen():
     global light
@@ -31,3 +31,6 @@ def setWarning(warning):
 
 def onLeaveScript():
     close.close1.setTooltip("")
+
+def getOpenLight():
+    return light
