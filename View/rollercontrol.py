@@ -87,7 +87,7 @@ class rollerwidget(object):
     roller3Toggle.place(x=150, y=118)
     roller3Toggle.bind("<Button-1>",lambda event:  controller.rollToggle(3))
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     r1.rollerWidget.place(height=150, width=300, x=25, y=410)
 
 r1 = rollerwidget()

@@ -33,7 +33,7 @@ class lightWidget(object):
     lightIcon.pack()
     lightIcon.place(x=value.widgetWidth -80, y=value.widgetHeight /2 - 30)
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     l1.lightWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=l1.lightWidgetPosX, y=l1.lightWidgetPosY)
 
 l1 = lightWidget()

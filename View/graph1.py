@@ -33,7 +33,7 @@ class graphwidget(object):
     graphLabel2.place(x=10, y=30)
 
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g1.graphWidget.place(height=150, width=525, x=330, y=410)
 
 g1 = graphwidget

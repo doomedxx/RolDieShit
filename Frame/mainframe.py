@@ -20,12 +20,16 @@ def loadfont(fontpath, private=True, enumerable=False):
     numFontsAdded = AddFontResourceEx(byref(pathbuf), flags, 0)
     return bool(numFontsAdded)
 
+
+########### LAAD ALLE CUSTOM FONTS ZODAT DEZE KUNNEN WORDEN WEERGEGEVEN##################
 loadfont("Fonts/CODE Bold.otf")
 loadfont("Fonts/CODE Light.ttf")
 loadfont("Fonts/DINBold.ttf")
 loadfont("Fonts/DINLight.ttf")
 loadfont("Fonts/DINMedium.ttf")
 loadfont("Fonts/DINRegular.ttf")
+
+##########################################################################################
 
 windowHeight = 580
 windowWidth = 880
@@ -38,6 +42,8 @@ root.minsize(width=windowWidth, height=windowHeight)
 root.iconbitmap('icon.ico')
 widgetList = []
 
+
+################# Geeft informatie weer onderaan de frame. #################
 VersionNumber = Label(root)
 VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg="gray15",  fg="white")
 VersionNumber.place(x=windowWidth - 90, y=windowHeight-25)

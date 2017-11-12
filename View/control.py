@@ -35,7 +35,7 @@ class controlwidget(object):
     controlWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=controlWidgetPosX, y=controlWidgetPosY)
     controlWidget.config(bg=color,borderwidth= value.borderWidth, relief=value.relief)
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     c1.controlWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=c1.controlWidgetPosX, y=c1.controlWidgetPosY)
 
 c1 = controlwidget()

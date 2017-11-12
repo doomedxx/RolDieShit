@@ -34,7 +34,7 @@ class graphwidget2(object):
     graphlabel2.pack()
     graphlabel2.place(x=5, y=-2)
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g2.graphWidget2.place(height=220, width=300, x=25, y=180)
 
 g2 = graphwidget2()

@@ -19,11 +19,12 @@ from View.Settings import setting_graphTemp
 from View.Settings import setting_graphLight
 
 closed = False
-def kill():
+def kill(): ## What should happen when the window is closed?
     print("Dashboard is gesloten")
     global closed
     closed = True
     mainframe.root.destroy()
+    mainframe.mainloop()
 
 mainframe.root.protocol('WM_DELETE_WINDOW', kill)  # root is your root window
 

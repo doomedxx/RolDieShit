@@ -25,7 +25,7 @@ class tempwidget:
     tempWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=tempWidgetPosX, y=tempWidgetPosY)
     tempWidget.config(bg="mediumseagreen",borderwidth= value.borderWidth, relief=value.relief)
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     t1.tempWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=t1.tempWidgetPosX, y=t1.tempWidgetPosY)
 
 t1 = tempwidget()

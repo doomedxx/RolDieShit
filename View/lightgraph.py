@@ -47,7 +47,7 @@ class graphwidget3(object):
     graphAverage.config(font=(value.informationInfoFont), bg="#65686d", fg="grey85")
     graphAverage.place(x=250, y=2)
 
-def replace():
+def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g3.graphWidget3.place(height=220, width=525, x=330, y=180)
 
 g3 = graphwidget3()
