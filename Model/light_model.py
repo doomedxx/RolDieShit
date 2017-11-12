@@ -2,11 +2,7 @@ from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
 from serial import *
-from Model.roller_model import checkLight as checkLight
 from Model.roller_model import checkTime as checkTime
-from Model.clock_model import getTime as currentTime
-import threading
-import random
 lightInput = 0
 
 try:

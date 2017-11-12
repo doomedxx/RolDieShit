@@ -9,7 +9,7 @@ class closelightsetting(object):
 
     mainframe.widgetList.append("closelight")
     def __init__(self):
-        self.maxlight = 50
+        self.maxlight = 70
         self.closelightWidgetPosX = 655
         self.closelightWidgetPosY = 70
         self.closelightWidget = Frame(mainframe.root, relief=SUNKEN)
@@ -42,8 +42,8 @@ class closelightsetting(object):
         self.lightsettingTip.place(x=0, y=value.tipY, width=150)
 
         self.closelightWarning = Label(self.closelightWidget)
-        self.closelightWarning.config(text="",font=("DIN-bold", 8), bg=value.settingsBackground, fg=value.tipColor)
-        self.closelightWarning.place(x=38, y=value.settingHeight - 40)
+        self.closelightWarning.config(text="",font=("DIN-bold", 8), bg=value.settingsBackground, fg=value.tipColor, anchor="c")
+        self.closelightWarning.place(x=0, y=value.settingHeight - 40, width=150)
 
     def setlight(self, lighterature):
         self.maxlight = lighterature

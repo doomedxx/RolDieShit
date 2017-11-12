@@ -21,7 +21,7 @@ font = "DIN-bold"
 settingHeight = 220 ## The height of a settings block
 settingWidth = 150 ## The width of a settings block
 
-settingsBackground = "gray40"         ## Change background of Widget Blocks
+settingsBackground = "#2e5aa0"         ## Change background of Widget Blocks
 
 tipBackground = "gray20"               ## The Tip Ribbon color
 tipY= 30                                ## At what height should the Tip Ribbon be displayed?
@@ -32,9 +32,9 @@ settingtitleFontSmall = ("DIN-bold", 12)
 
 settingButtonColor =  "gray20"
 
-tipColor = 'gray25'             ## tip Font
+tipColor = 'gray75'             ## tip Font
 tipFont = ("DIN", 10)
 
-settingIndicatorColor = 'white'       ## Change information font color
+settingIndicatorColor = '#a6a7a8'       ## Change information font color
 settingInformationFont = ("DIN-bold", 34)
 settingInformationHeight = 3

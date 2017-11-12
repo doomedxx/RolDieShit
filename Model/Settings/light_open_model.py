@@ -1,11 +1,14 @@
 from View.Settings import setting_closelight as close
 from View.Settings import setting_openlight as open
 
-light = 70
+light = 30
 
 def increaseLightOpen():
     global light
-    if light >= 0 and light <= 95:
+    from Model.Settings.light_close_model import getLightValue
+    if light >= getLightValue()-5:
+        setWarning("Keep Open value higher \nthan Close value")
+    elif light >= 0 and light <= 95:
         open.open1.lightDecrease.config(state='normal')
         setWarning("")
         light+=5
@@ -27,7 +30,11 @@ def decreaseLightOpen():
     open.open1.setlight(light)
 
 def setWarning(warning):
-    close.close1.closelightWarning.config(text=warning)
+    open.open1.openlightWarning.config(text=warning, fg="white")
+
+def getLightValue():
+    global light
+    return light
 
 def onLeaveScript():
     close.close1.setTooltip("")

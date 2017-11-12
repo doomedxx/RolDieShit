@@ -9,7 +9,7 @@ class openlightsetting(object):
 
     mainframe.widgetList.append("openlight")
     def __init__(self):
-        self.maxlight = 50
+        self.maxlight = 30
         self.openlightWidgetPosX = 655
         self.openlightWidgetPosY = 320
         self.openlightWidget = Frame(mainframe.root, relief=SUNKEN)
@@ -42,8 +42,8 @@ class openlightsetting(object):
         self.lightsettingTip.place(x=0, y=value.tipY, width=150)
 
         self.openlightWarning = Label(self.openlightWidget)
-        self.openlightWarning.config(text="",font=("DIN-bold", 8), bg=value.settingsBackground, fg=value.tipColor)
-        self.openlightWarning.place(x=38, y=value.settingHeight - 40)
+        self.openlightWarning.config(text="",font=("DIN-bold", 8), bg=value.settingsBackground, fg=value.tipColor, anchor="c")
+        self.openlightWarning.place(x=0, y=value.settingHeight - 40, width=150)
 
     def setlight(self, lighterature):
         self.maxlight = lighterature
