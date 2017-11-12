@@ -15,6 +15,7 @@ class rollerwidget(object):
     closeImage = PhotoImage(file='images/closed.png')
     openImage = PhotoImage(file='images/open.png')
     motionImage = PhotoImage(file='images/motion.png')
+    memeImage = PhotoImage(file='images/meme.png')
     mainframe.widgetList.append("Roller Control Unit")
     rollerWidget = Frame(mainframe.root, relief=SUNKEN)
 
@@ -22,6 +23,10 @@ class rollerwidget(object):
     rollerLabel.config(font=(value.titlefont), bg=widgetBackground, fg=value.titleColor)
     rollerLabel.pack()
     rollerLabel.place(x=5, y=1)
+    
+    meme = Label(rollerWidget, image=memeImage, bg=widgetBackground)
+    meme.pack()
+    meme.place(x=150, y=50)
 
     rollerWidget.pack(side=LEFT)
     rollerWidget.place(height=widgetHeight, width=widgetWidth, x=25, y=410)
