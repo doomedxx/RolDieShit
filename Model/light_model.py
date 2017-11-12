@@ -1,13 +1,17 @@
 from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
+from serial import *
+from Model.roller_model import checkLight as checkLight
+from Model.roller_model import checkTime as checkTime
 from Model.clock_model import getTime as currentTime
 import threading
 import random
+lightInput = 0
 
 try:
     ser = Serial(
-        port='COM3',
+        port='COM5',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
@@ -17,22 +21,30 @@ except:
     print("Disconnected")
 
 def updateTick():
+    global lightInput
     f.root.after(1000, updateTick)
+    f.root.after(1000, checkTime)
     try:
         value = ser.read()
         min = 25                #min light value
-        max = 50                #max light value
+        max = 60                #max light value
         if value:
             lightNum = int.from_bytes(value, byteorder='little')
-            print(lightNum)
+            #print(lightNum)
             lightToPercentage = round((lightNum - min) * 100 / (max - min))
+            lightInput = lightToPercentage
             #print(lightToPercentage)
             view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
             checkPreset(lightToPercentage)
             updateGraph(lightToPercentage)
+            getLight()
     except:
         view.l1.lightLabelCount.config(text="N/A")
         view.l1.lightLabelPreset.config(text="[Restart]")
+
+def getLight():
+    #print(lightInput)
+    return lightInput
 
 
 def checkPreset(light):
@@ -59,7 +71,7 @@ def updateGraph(light):
     cycle+=1
     average = round(sum(graph.g3.y) / len(graph.g3.y))
     averageList.append(average)
-    print(len(graph.g3.x))
+   # print(len(graph.g3.x))
     if cycle >= 11:
         graph.g3.line2.set_xdata(graph.g3.x)
         graph.g3.line2.set_ydata(averageList)
