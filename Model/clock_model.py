@@ -19,3 +19,11 @@ def setTime():
 
 def getTime():
     return time_string
+
+def getHour():
+    hour_string = time.strftime('%H')
+    return hour_string
+
+def getMinute():
+    minute_string = time.strftime('%M')
+    return minute_string
