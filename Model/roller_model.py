@@ -32,7 +32,6 @@ def checkLight(): ## Checks the light value and executes a fitting function when
     closeLight = lightClose.getCloseLight()
     openLight = lightOpen.getOpenLight()
     lightInput = light.getLight()
-    print(isMoving)
 
     if lightInput < closeLight and isMoving == False:
         All("Closed")

@@ -1,50 +1,43 @@
-from View import light as view
-from View import lightgraph as graph
+import View.temperature as view
+
 import Frame.mainframe as f
 from serial import *
-from Model.roller_model import checkMode as checkMode
-from Model.temp_model import printTemp as printTemp
-lightInput = 0
+tempInput = 0
 
 try:
     ser = Serial(
-        port='COM5',
+        port='COM7',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
         bytesize=EIGHTBITS,
         timeout=0)
+    print("Bessel Connected")
+
 except:
-    print("Disconnected")
+    print("Bessel disconnected")
 
-def updateTick():
-    global lightInput
-    f.root.after(200, updateTick)
-    f.root.after(1000, checkMode)
-    f.root.after(1000, printTemp)
-    try:
-        value = ser.read()
-        min = 30                #min light value
-        max = 50               #max light value
-        if value:
-            lightNum = int.from_bytes(value, byteorder='little')
-            #print(lightNum)
-            lightToPercentage = round((lightNum - min) * 100 / (max - min))
-            lightInput = lightToPercentage
-            #print(lightToPercentage)
-            view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
-            checkPreset(lightToPercentage)
-            updateGraph(lightToPercentage)
-            getLight()
-    except:
-        view.l1.lightLabelCount.config(text="N/A")
-        view.l1.lightLabelPreset.config(text="[Restart]")
+def printTemp():
+    global tempInput
+    #try:
+    value = ser.read()
+    if value:
+        tempNum = int.from_bytes(value, byteorder='little')
+        print(tempNum)
+        tempInput = tempNum
+        view.t1.tempLabelCount.config(text="{}°C".format(tempNum))
+        #checkPreset(lightToPercentage)
+        #updateGraph(lightToPercentage)
+        getTemp()
+    #except:
+        #print("doei")
 
-def getLight():
+
+def getTemp():
     #print(lightInput)
-    return lightInput
+    return tempInput
 
-
+'''
 def checkPreset(light):
     if light >= 0 and light <= 20:
         view.l1.lightLabelPreset.config(text="[Very Dark]")
@@ -78,3 +71,10 @@ def updateGraph(light):
     graph.g3.line.set_ydata(graph.g3.y)
     graph.g3.line.set_xdata(graph.g3.x)
     graph.g3.canvas.draw()
+'''
+
+
+
+def updateTemp():
+    pass
+    #print("Update werkt")

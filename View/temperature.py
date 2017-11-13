@@ -2,7 +2,7 @@ from tkinter import *
 
 import Frame.mainframe as mainframe
 import View.widgetValues as value
-
+from Controller import temp_controller as controller
 
 class tempwidget:
     mainframe.widgetList.append("Temperature")
@@ -29,3 +29,4 @@ def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word 
     t1.tempWidget.place(height=value.widgetHeight, width=value.widgetWidth, x=t1.tempWidgetPosX, y=t1.tempWidgetPosY)
 
 t1 = tempwidget()
+controller.update()
