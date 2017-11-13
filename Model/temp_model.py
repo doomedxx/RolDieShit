@@ -6,31 +6,31 @@ tempInput = 0
 
 try:
     ser = Serial(
-        port='COM7',
+        port='COM4',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
         bytesize=EIGHTBITS,
         timeout=0)
-    print("Bessel Connected")
+    print("Temp Connected")
 
 except:
-    print("Bessel disconnected")
+    print("Temp disconnected")
 
 def printTemp():
     global tempInput
-    #try:
-    value = ser.read()
-    if value:
-        tempNum = int.from_bytes(value, byteorder='little')
-        print(tempNum)
-        tempInput = tempNum
-        view.t1.tempLabelCount.config(text="{}°C".format(tempNum))
-        #checkPreset(lightToPercentage)
-        #updateGraph(lightToPercentage)
-        getTemp()
-    #except:
-        #print("doei")
+    try:
+        value = ser.read()
+        if value:
+            tempNum = int.from_bytes(value, byteorder='little')
+            print(tempNum)
+            tempInput = tempNum
+            view.t1.tempLabelCount.config(text="{}°C".format(tempNum))
+            checkPreset(lightToPercentage)
+            updateGraph(lightToPercentage)
+            getTemp()
+    except:
+        view.t1.tempLabelCount.config(text="N/A")
 
 
 def getTemp():

@@ -15,8 +15,8 @@ class tempwidget:
     tempIcon.place(x=value.widgetWidth -80, y=value.widgetHeight /2 - 30)
 
     tempLabelCount = Label(tempWidget, text="  23C")
-    tempLabelCount.config(font=value.informationFont, bg="mediumseagreen", fg=value.indicatorColor)
-    tempLabelCount.place(x=0, y=16)
+    tempLabelCount.config(font=value.informationFont, bg="mediumseagreen", fg=value.indicatorColor, anchor="c")
+    tempLabelCount.place(x=0, y=16, width=130)
 
     tempLabel = Label(tempWidget)
     tempLabel.config(text="TEMPERATURE",font=value.titlefont, bg="mediumseagreen", fg=value.titleColor)
