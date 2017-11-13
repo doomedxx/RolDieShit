@@ -20,7 +20,7 @@ def increaseLightOpen():
 def decreaseLightOpen():
     global light
     if light >= 5 and light <= 100:
-        setWarning("")
+        setWarning(" ")
         light-=5
         open.open1.lightIncrement.config(state='normal')
     else:
