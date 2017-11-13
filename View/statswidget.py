@@ -41,7 +41,7 @@ class graphwidget(object):
     graphLabel2.pack()
     graphLabel2.place(x=10, y=30)
 
-    graphLabelLight = Label(graphWidget, text="Light")
+    graphLabelLight = Label(graphWidget, text="Light Unit")
     graphLabelLight.config(font=(value.font, 8), bg=value.widgetBackground, fg="white")
     graphLabelLight.pack()
     graphLabelLight.place(x=10, y=50)
@@ -56,18 +56,30 @@ class graphwidget(object):
         graphLabelCon.place(x=100, y=50)
 
     graphLabelTemp = Label(graphWidget, text="Temperature")
-    graphLabelTemp.config(font=(value.font,8), bg=value.widgetBackground,fg="white")
+    graphLabelTemp.config(font=(value.font,8), bg=value.widgetBackground,fg="white", anchor="w")
     graphLabelTemp.pack()
-    graphLabelTemp.place(x=10,y=70)
+    graphLabelTemp.place(x=10,y=80)
 
     if temp.getConnection() == True:
         graphLabelCon = Label(graphWidget, image=connect, bg=value.widgetBackground)
         graphLabelCon.pack()
-        graphLabelCon.place(x=100, y=70)
+        graphLabelCon.place(x=100, y=75)
     elif temp.getConnection() == False:
         graphLabelCon = Label(graphWidget, image=disconnect, bg=value.widgetBackground)
         graphLabelCon.pack()
-        graphLabelCon.place(x=100, y=70)
+        graphLabelCon.place(x=100, y=75)
+
+    graphLabelDistance = Label(graphWidget, text="Distance")
+    graphLabelDistance.config(font=(value.font,8), bg=value.widgetBackground,fg="white", anchor="w")
+    graphLabelDistance.pack()
+    graphLabelDistance.place(x=10,y=110)
+
+    graphLabelCon = Label(graphWidget, image=disconnect, bg=value.widgetBackground)
+    graphLabelCon.pack()
+    graphLabelCon.place(x=100, y=105)
+
+    Seperator = Separator(graphWidget,orient=HORIZONTAL)
+
 
     averagetemp = Label(graphWidget, text="Avg temp")
     averagetemp.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")

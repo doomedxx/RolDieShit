@@ -14,7 +14,7 @@ def executeSettings():
     view.temperature.t1.tempWidget.place_forget()
     view.lightgraph.g3.graphWidget3.place_forget()
     view.graph2.g2.graphWidget2.place_forget()
-    view.graph1.g1.graphWidget.place_forget()
+    view.statswidget.g1.graphWidget.place_forget()
     view.rollercontrol.r1.rollerWidget.place_forget()
     settings.settings_officehours.office1.addBlock()
     settings.setting_theme.t1.addBlock()
@@ -45,7 +45,7 @@ def executeView():
     settings.setting_openlight.open1.openlightWidget.place_forget()
 
     view.control.replace()
-    view.graph1.replace()
+    view.statswidget.replace()
     view.graph2.replace()
     view.lightgraph.replace()
     view.clock.replace()
