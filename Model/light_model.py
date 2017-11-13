@@ -8,14 +8,15 @@ lightInput = 0
 
 try:
     ser = Serial(
-        port='COM5',
+        port='COM3',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
         bytesize=EIGHTBITS,
         timeout=0)
+    print("Light Connected")
 except:
-    print("Disconnected")
+    print("Light Disconnected")
 
 def updateTick():
     global lightInput
@@ -24,8 +25,9 @@ def updateTick():
     f.root.after(1000, printTemp)
     try:
         value = ser.read()
-        min = 30                #min light value
-        max = 50               #max light value
+        min = 25                #min light value
+        max = 60                #max light value
+        print(value)
         if value:
             lightNum = int.from_bytes(value, byteorder='little')
             #print(lightNum)
