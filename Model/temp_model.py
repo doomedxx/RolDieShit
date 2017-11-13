@@ -1,6 +1,7 @@
 import View.temperature as view
-
+import View.graph2 as graph
 import Frame.mainframe as f
+from random import randint
 from serial import *
 tempInput = 0
 connection = True
@@ -28,6 +29,7 @@ def totalTemp():
     return average
 
 
+temp =  25 #Simulatie doeleinde
 def printTemp():
     global tempInput
     global counter
@@ -42,12 +44,16 @@ def printTemp():
             counter += tempInput
             count +=1
             view.t1.tempLabelCount.config(text="  {}C".format(tempNum))
-            #checkPreset(lightToPercentage)
-            #updateGraph(lightToPercentage)
             getTemp()
     except:
-
-        view.t1.tempLabelCount.config(text="N/A")
+        global temp
+        rand = randint(0,1)
+        if rand == 1:
+            temp+=1
+        if rand == 0:
+            temp-=1
+            updateGraph(temp)
+        view.t1.tempLabelCount.config(text=temp)
 
 
 
@@ -55,38 +61,31 @@ def getTemp():
     #print(lightInput)
     return tempInput
 
-'''
-def checkPreset(light):
-    if light >= 0 and light <= 20:
-        view.l1.lightLabelPreset.config(text="[Very Dark]")
-    elif light >= 20 and light < 40:
-        view.l1.lightLabelPreset.config(text="[Dark]")
-    elif light >= 40 and light < 50:
-        view.l1.lightLabelPreset.config(text="[Dimmed]")
-    elif light >= 50 and light < 80:
-        view.l1.lightLabelPreset.config(text="[Bright]")
-    elif light >= 80 and light < 99:
-        view.l1.lightLabelPreset.config(text="[Very Bright]")
-    elif light >= 99:
-        view.l1.lightLabelPreset.config(text="[Full Bright]")
-
 averageList = [0,0,0,0,0,0,0,0,0,0,0]
 cycle = 0
-def updateGraph(light):
+xSet = 100
+def updateGraph(temp):
     global averageList
+    global xSet
     global cycle
-    graph.g3.x.append(cycle)
-    graph.g3.y.append(light)
+    graph.g2.x.append(cycle)
+    graph.g2.y.append(temp)
     cycle+=1
-    average = round(sum(graph.g3.y) / len(graph.g3.y))
+    average = round(sum(graph.g2.y) / len(graph.g2.y))
     averageList.append(average)
-   # print(len(graph.g3.x))
+    # print(len(graph.g2.x))
     if cycle >= 11:
-        graph.g3.line2.set_xdata(graph.g3.x)
-        graph.g3.line2.set_ydata(averageList)
+        graph.g2.line2.set_xdata(graph.g2.x)
+        graph.g2.line2.set_ydata(averageList)
 
 
-    graph.g3.line.set_ydata(graph.g3.y)
-    graph.g3.line.set_xdata(graph.g3.x)
-    graph.g3.canvas.draw()
-'''
+    graph.g2.line.set_ydata(graph.g2.y)
+    graph.g2.line.set_xdata(graph.g2.x)
+    graph.g2.canvas.draw()
+    if cycle == xSet:
+        xSet+=100
+        graph.update(xSet)
+
+    graph.g2.line.set_ydata(graph.g2.y)
+    graph.g2.line.set_xdata(graph.g2.x)
+    graph.g2.canvas.draw()

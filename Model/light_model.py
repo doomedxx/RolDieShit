@@ -1,6 +1,7 @@
 from View import light as view
 #from View import graph1 as graph1
 from View import lightgraph as graph
+from View import graph2 as graph2
 import Frame.mainframe as f
 from serial import *
 from random import randint
@@ -39,7 +40,7 @@ def updateTick():
     global lightInput
     global counter
     global count
-    f.root.after(1000, updateTick)
+    f.root.after(500, updateTick)
     f.root.after(1000, checkMode)
     f.root.after(1000, printTemp)
     try:
@@ -96,10 +97,10 @@ def checkPreset(light):
 
 averageList = [0,0,0,0,0,0,0,0,0,0,0]
 cycle = 0
-xSet = 100
+SetX = 100
 def updateGraph(light):
     global averageList
-    global xSet
+    global SetX
     global cycle
     graph.g3.x.append(cycle)
     graph.g3.y.append(light)
@@ -115,8 +116,6 @@ def updateGraph(light):
     graph.g3.line.set_ydata(graph.g3.y)
     graph.g3.line.set_xdata(graph.g3.x)
     graph.g3.canvas.draw()
-    if cycle == xSet:
-        print(xSet)
-        xSet+=100
-        print(xSet)
-        graph.update(xSet)
+    if cycle == SetX:
+        SetX+=50
+        graph.update(SetX)

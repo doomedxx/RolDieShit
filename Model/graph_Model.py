@@ -2,12 +2,6 @@ from View import lightgraph as light
 from View import graph2 as tempgraph
 from View.Settings import setting_graphTemp as tempSetting
 
-def getTools():
-    light.g3.graphWidget3Tool.place(x=330, y=385, width=525)
-
-def releaseTools():
-    light.g3.graphWidget3Tool.place_forget()
-
 def increaselightX():
     pass
 def decreaselightX():

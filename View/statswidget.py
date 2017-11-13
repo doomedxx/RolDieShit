@@ -41,7 +41,7 @@ class graphwidget(object):
     graphLabel2.pack()
     graphLabel2.place(x=10, y=30)
 
-    graphLabelLight = Label(graphWidget, text="Light Unit")
+    graphLabelLight = Label(graphWidget, text="Light")
     graphLabelLight.config(font=(value.font, 8), bg=value.widgetBackground, fg="white")
     graphLabelLight.pack()
     graphLabelLight.place(x=10, y=50)
