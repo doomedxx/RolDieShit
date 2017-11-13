@@ -16,13 +16,9 @@ try:
         timeout=0)
     print("Light Connected")
 except:
-<<<<<<< HEAD
-    print("Disconnected")
-light = 50 # Voor simulatie doeleinde
-=======
     print("Light Disconnected")
 
->>>>>>> 743b0059e610b3da8d56e92322e52db79b50db1c
+light = 50 # Voor simulatie doeleinde
 def updateTick():
     global light
     global lightInput
