@@ -75,11 +75,9 @@ def Mode():
     global isEnabled
     if isEnabled == False:
         isEnabled = True
-        view.rollerwidget.rollerLabelMode.config(text="MODE: Automatic")
         c.controlwidget.controlButtonMode.config(text="MANUAL")
     elif isEnabled == True:
         isEnabled = False
-        view.rollerwidget.rollerLabelMode.config(text="MODE: Manual")
         c.controlwidget.controlButtonMode.config(text="AUTOMATIC")
 
 def All(toggle):

@@ -13,7 +13,7 @@ import View.widgetValues as value
 class graphwidget(object):
     graphWidget = Frame(mainframe.root, relief=SUNKEN)
 
-    graphLabel = Label(graphWidget, text="EEN GRAPH")
+    graphLabel = Label(graphWidget, text="STATISTICS")
     graphLabel.config(font=(value.titlefont), bg=value.widgetBackground, fg=value.titleColor)
     graphLabel.pack()
     graphLabel.place(x=5, y=1)
@@ -27,8 +27,8 @@ class graphwidget(object):
     graphLabel1.pack()
     graphLabel1.place(x=10, y=30)
 
-    graphLabel2 = Label(graphWidget, text="Placeholder")
-    graphLabel2.config(font=(value.titlefont), bg=value.widgetBackground, fg="white")
+    graphLabel2 = Label(graphWidget, text="Connected Arduinos")
+    graphLabel2.config(font=(value.informationFont), bg=value.widgetBackground, fg="white")
     graphLabel2.pack()
     graphLabel2.place(x=10, y=30)
 
