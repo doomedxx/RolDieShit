@@ -2,6 +2,7 @@ from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
 from serial import *
+from random import randint
 from Model.roller_model import checkMode as checkMode
 from Model.temp_model import printTemp as printTemp
 lightInput = 0
@@ -16,10 +17,11 @@ try:
         timeout=0)
 except:
     print("Disconnected")
-
+light = 50 # Voor simulatie doeleinde
 def updateTick():
+    global light
     global lightInput
-    f.root.after(200, updateTick)
+    f.root.after(500, updateTick)
     f.root.after(1000, checkMode)
     f.root.after(1000, printTemp)
     try:
@@ -37,12 +39,21 @@ def updateTick():
             updateGraph(lightToPercentage)
             getLight()
     except:
-        view.l1.lightLabelCount.config(text="N/A")
+        rand = randint(0,1)
+        if rand == 1:
+            light+=1
+        elif rand == 0:
+            light-=1
+        view.l1.lightLabelCount.config(text=light)
+        updateGraph(light)
         view.l1.lightLabelPreset.config(text="[Restart]")
 
 def getLight():
     #print(lightInput)
     return lightInput
+
+def getLightSimu():
+    return light
 
 
 def checkPreset(light):
@@ -61,8 +72,10 @@ def checkPreset(light):
 
 averageList = [0,0,0,0,0,0,0,0,0,0,0]
 cycle = 0
+xSet = 100
 def updateGraph(light):
     global averageList
+    global xSet
     global cycle
     graph.g3.x.append(cycle)
     graph.g3.y.append(light)
@@ -78,3 +91,8 @@ def updateGraph(light):
     graph.g3.line.set_ydata(graph.g3.y)
     graph.g3.line.set_xdata(graph.g3.x)
     graph.g3.canvas.draw()
+    if cycle == xSet:
+        print(xSet)
+        xSet+=100
+        print(xSet)
+        graph.update(xSet)

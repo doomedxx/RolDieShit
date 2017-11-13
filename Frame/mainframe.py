@@ -1,8 +1,7 @@
 from tkinter import *
 from tkinter import Tk
 import getpass
-import builtins
-builtins.timeGlobal = 1
+
 
 from ctypes import windll, byref, create_unicode_buffer, create_string_buffer
 FR_PRIVATE  = 0x10

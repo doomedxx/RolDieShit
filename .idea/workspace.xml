@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/View/lightgraph.py" line="38" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/View/lightgraph.py" line="39" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38ce7377-b117-4a89-8ba6-2a9238dfdb2b" name="Default" comment="" />
@@ -15,104 +15,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/__init__.py">
+      <file leaf-file-name="light_model.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Model/light_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temp_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/temp_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="20" column="20" lean-forward="false" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rollercontrol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/rollercontrol.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mainframe.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Frame/mainframe.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-                <element signature="e#277#819#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgetValues.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/widgetValues.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="20" lean-forward="false" selection-start-line="35" selection-start-column="20" selection-end-line="35" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="roller_model.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Model/roller_model.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="464">
-              <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="light.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/light.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="light_controller.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller/light_controller.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="temperature.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/View/temperature.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#21#0" expanded="true" />
+                <element signature="e#0#30#0" expanded="true" />
+                <marker date="1510593996542" expanded="true" signature="772:1262" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,8 +31,8 @@
       <file leaf-file-name="lightgraph.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/View/lightgraph.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
+            <state relative-caret-position="799">
+              <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -139,7 +49,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>titleColor</find>
       <find>closelightWidget</find>
       <find>value.fon</find>
       <find>&quot;gray30&quot;</find>
@@ -169,6 +78,7 @@
       <find>controller</find>
       <find>STATUS</find>
       <find>Mode</find>
+      <find>built</find>
     </findStrings>
     <replaceStrings>
       <replace>deep sky blue</replace>
@@ -247,7 +157,6 @@
         <option value="$PROJECT_DIR$/Model/graph_Model.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
         <option value="$PROJECT_DIR$/View/graph1.py" />
-        <option value="$PROJECT_DIR$/View/graph2.py" />
         <option value="$PROJECT_DIR$/View/light.py" />
         <option value="$PROJECT_DIR$/View/clock.py" />
         <option value="$PROJECT_DIR$/Controller/clock_controller.py" />
@@ -259,15 +168,16 @@
         <option value="$PROJECT_DIR$/Model/Settings/light_close_model.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_closelight.py" />
         <option value="$PROJECT_DIR$/View/Settings/setting_openlight.py" />
-        <option value="$PROJECT_DIR$/Model/light_model.py" />
         <option value="$PROJECT_DIR$/Controller/temp_controller.py" />
         <option value="$PROJECT_DIR$/Model/roller_model.py" />
         <option value="$PROJECT_DIR$/Model/temp_model.py" />
         <option value="$PROJECT_DIR$/View/temperature.py" />
-        <option value="$PROJECT_DIR$/View/lightgraph.py" />
         <option value="$PROJECT_DIR$/View/widgetValues.py" />
         <option value="$PROJECT_DIR$/View/rollercontrol.py" />
         <option value="$PROJECT_DIR$/Frame/mainframe.py" />
+        <option value="$PROJECT_DIR$/View/graph2.py" />
+        <option value="$PROJECT_DIR$/View/lightgraph.py" />
+        <option value="$PROJECT_DIR$/Model/light_model.py" />
       </list>
     </option>
   </component>
@@ -580,13 +490,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13645834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42222223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42222223" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -646,7 +557,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Frame/mainframe.py</url>
-          <line>38</line>
+          <line>37</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -772,14 +683,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/graph2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="36" column="107" lean-forward="false" selection-start-line="36" selection-start-column="107" selection-end-line="36" selection-end-column="107" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/View/toolbar.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -796,7 +699,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Model/controller_model.py" />
-    <entry file="file://$PROJECT_DIR$/Model/light_modelv2.py" />
     <entry file="file://$PROJECT_DIR$/View/clock.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
@@ -889,13 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model/graph_Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/roller_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -904,17 +799,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/temp_controller.py" />
-    <entry file="file://$PROJECT_DIR$/Model/light_model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="39" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-            <marker date="1510589033993" expanded="true" signature="691:1181" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller/light_controller.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -963,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/View/lightgraph.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="41" column="45" lean-forward="false" selection-start-line="41" selection-start-column="45" selection-end-line="41" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Model/roller_model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="464">
@@ -999,11 +875,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Frame/mainframe.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-            <element signature="e#277#819#0" expanded="false" />
+            <element signature="e#238#780#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/light_modelv2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/graph_Model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="41" column="19" lean-forward="true" selection-start-line="41" selection-start-column="19" selection-end-line="41" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/graph2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="42" column="15" lean-forward="true" selection-start-line="42" selection-start-column="15" selection-end-line="42" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/View/lightgraph.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="53" column="17" lean-forward="false" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model/light_model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+            <marker date="1510593996542" expanded="true" signature="772:1262" ph="..." />
           </folding>
         </state>
       </provider>

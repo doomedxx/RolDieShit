@@ -15,14 +15,15 @@ class graphwidget3(object):
     graphWidget3Tool = Frame(mainframe.root, relief=SUNKEN)
 
     f = plt.figure(figsize=(10,10), dpi=70, facecolor='#65686d', edgecolor="white")
-    a = f.add_subplot(1,1,1)
+    ax = f.add_subplot(1,1,1)
     x = [0,0,0,0,0,0,0,0,0,0,0]
     y = [0,0,0,0,0,0,0,0,0,0,0]
-    line, = a.plot(x,y, 'green')
-    line2, = a.plot(x,y, 'gray')
+    line, = ax.plot(x,y, 'green')
+    line2, = ax.plot(x,y, 'gray')
 
     plt.ylim(0,100)
     plt.xlim(0,100)
+    plt.draw()
 
     canvas = FigureCanvasTkAgg(f, graphWidget3)
     canvas.get_tk_widget().pack(expand=True)
@@ -50,4 +51,8 @@ class graphwidget3(object):
 def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g3.graphWidget3.place(height=220, width=525, x=330, y=180)
 
+def update(xSet):
+    plt.xlim(0,xSet)
+
 g3 = graphwidget3()
+update
