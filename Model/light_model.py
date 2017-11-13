@@ -1,7 +1,7 @@
 from View import light as view
-#from View import graph1 as graph1
 from View import lightgraph as graph
 from View import graph2 as graph2
+#from View import statswidget as stats
 import Frame.mainframe as f
 from serial import *
 from random import randint
@@ -32,7 +32,7 @@ def getConnection():
 
 def totalLight():
     average = round(counter/count,1)
-    #graph1.g1.averagetempvalue.config(text="{}%".format(average))
+    #stats.g1.averagetempvalue.config(text="{}%".format(average))
     return average
 
 def updateTick():
