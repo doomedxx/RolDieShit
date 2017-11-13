@@ -21,6 +21,7 @@ def printTemp():
     global tempInput
     try:
         value = ser.read()
+<<<<<<< HEAD
         #print(value)
         if value:
             tempNum = int.from_bytes(value, byteorder='little')
@@ -32,6 +33,18 @@ def printTemp():
             getTemp()
     except:
         pass    #print("doei")
+=======
+        if value:
+            tempNum = int.from_bytes(value, byteorder='little')
+            print(tempNum)
+            tempInput = tempNum
+            view.t1.tempLabelCount.config(text="{}°C".format(tempNum))
+            checkPreset(lightToPercentage)
+            updateGraph(lightToPercentage)
+            getTemp()
+    except:
+        view.t1.tempLabelCount.config(text="N/A")
+>>>>>>> 8f4abafb9d7dc56901543e0167a96a910ff57b05
 
 
 def getTemp():
