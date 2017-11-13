@@ -3,7 +3,7 @@ import View.temperature as view
 import Frame.mainframe as f
 from serial import *
 tempInput = 0
-
+connection = True
 try:
     ser = Serial(
         port='COM4',
@@ -13,15 +13,18 @@ try:
         bytesize=EIGHTBITS,
         timeout=0)
     print("Temp Connected")
-
+    connection = True
 except:
     print("Temp disconnected")
+    connection = False
+
+def getConnection():
+    return connection
 
 def printTemp():
     global tempInput
     try:
         value = ser.read()
-<<<<<<< HEAD
         #print(value)
         if value:
             tempNum = int.from_bytes(value, byteorder='little')
@@ -32,19 +35,8 @@ def printTemp():
             #updateGraph(lightToPercentage)
             getTemp()
     except:
-        pass    #print("doei")
-=======
-        if value:
-            tempNum = int.from_bytes(value, byteorder='little')
-            print(tempNum)
-            tempInput = tempNum
-            view.t1.tempLabelCount.config(text="{}°C".format(tempNum))
-            checkPreset(lightToPercentage)
-            updateGraph(lightToPercentage)
-            getTemp()
-    except:
         view.t1.tempLabelCount.config(text="N/A")
->>>>>>> 8f4abafb9d7dc56901543e0167a96a910ff57b05
+
 
 
 def getTemp():

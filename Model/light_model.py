@@ -5,6 +5,9 @@ from serial import *
 from Model.roller_model import checkMode as checkMode
 from Model.temp_model import printTemp as printTemp
 lightInput = 0
+connection = True
+counter = 0
+count = 1
 
 try:
     ser = Serial(
@@ -15,11 +18,21 @@ try:
         bytesize=EIGHTBITS,
         timeout=0)
     print("Light Connected")
+    connection = True
 except:
     print("Light Disconnected")
+    connection = False
+
+def getConnection():
+        return connection
+
+def totalLight():
+    return counter/count
 
 def updateTick():
     global lightInput
+    global counter
+    global count
     f.root.after(200, updateTick)
     f.root.after(1000, checkMode)
     f.root.after(1000, printTemp)
@@ -27,17 +40,19 @@ def updateTick():
         value = ser.read()
         min = 25                #min light value
         max = 60                #max light value
-        print(value)
         if value:
             lightNum = int.from_bytes(value, byteorder='little')
             #print(lightNum)
             lightToPercentage = round((lightNum - min) * 100 / (max - min))
             lightInput = lightToPercentage
+            counter += lightInput
+            count += 1
             #print(lightToPercentage)
             view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
             checkPreset(lightToPercentage)
             updateGraph(lightToPercentage)
             getLight()
+            totalLight()
     except:
         view.l1.lightLabelCount.config(text="N/A")
         view.l1.lightLabelPreset.config(text="[Restart]")
