@@ -100,6 +100,46 @@ class graphwidget(object):
     averagetempvalue.pack()
     averagetempvalue.place(x=225, y=50)
 
+    maxlight = Label(graphWidget, text="Max light %")
+    maxlight.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    maxlight.pack()
+    maxlight.place(x=300, y=30)
+
+    maxlightval = Label(graphWidget, text="85%")
+    maxlightval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    maxlightval.pack()
+    maxlightval.place(x=300, y=50)
+
+    minlight = Label(graphWidget, text="Min light %")
+    minlight.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    minlight.pack()
+    minlight.place(x=300, y=70)
+
+    minlightval = Label(graphWidget, text="32%")
+    minlightval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    minlightval.pack()
+    minlightval.place(x=300, y=90)
+
+    maxtemp = Label(graphWidget, text="Max temp")
+    maxtemp.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    maxtemp.pack()
+    maxtemp.place(x=375, y=30)
+
+    maxtempval = Label(graphWidget, text="25°C")
+    maxtempval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    maxtempval.pack()
+    maxtempval.place(x=375, y=50)
+
+    mintemp = Label(graphWidget, text="Min temp")
+    mintemp.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    mintemp.pack()
+    mintemp.place(x=375, y=70)
+
+    mintempval = Label(graphWidget, text="20°C")
+    mintempval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    mintempval.pack()
+    mintempval.place(x=375, y=90)
+
 
 def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g1.graphWidget.place(height=150, width=525, x=330, y=410)
