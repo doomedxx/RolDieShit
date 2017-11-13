@@ -78,8 +78,6 @@ class graphwidget(object):
     graphLabelCon.pack()
     graphLabelCon.place(x=100, y=105)
 
-    Seperator = Separator(graphWidget,orient=HORIZONTAL)
-
 
     averagetemp = Label(graphWidget, text="Avg temp")
     averagetemp.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
