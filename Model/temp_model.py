@@ -4,6 +4,8 @@ import Frame.mainframe as f
 from serial import *
 tempInput = 0
 connection = True
+counter = 21
+count = 1
 try:
     ser = Serial(
         port='COM4',
@@ -21,8 +23,15 @@ except:
 def getConnection():
     return connection
 
+def totalTemp():
+    average = round(counter/count,1)
+    return average
+
+
 def printTemp():
     global tempInput
+    global counter
+    global count
     try:
         value = ser.read()
         #print(value)
@@ -30,11 +39,14 @@ def printTemp():
             tempNum = int.from_bytes(value, byteorder='little')
          #   print(tempNum)
             tempInput = tempNum
+            counter += tempInput
+            count +=1
             view.t1.tempLabelCount.config(text="  {}C".format(tempNum))
             #checkPreset(lightToPercentage)
             #updateGraph(lightToPercentage)
             getTemp()
     except:
+
         view.t1.tempLabelCount.config(text="N/A")
 
 

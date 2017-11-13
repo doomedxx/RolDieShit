@@ -9,6 +9,7 @@ import Frame.mainframe as mainframe
 import View.widgetValues as value
 from Model import light_model as light
 from Model import temp_model as temp
+from Controller import light_controller as controller
 
 
 class graphwidget(object):
@@ -16,9 +17,10 @@ class graphwidget(object):
     widgetHeight = 150
     widgetWidth = 300
     totalLight = light.totalLight()
+    totalTemp = temp.totalTemp()
 
-    closeImage = PhotoImage(file='images/closed.png')
-    openImage = PhotoImage(file='images/open.png')
+    disconnect = PhotoImage(file='images/disconnect.png')
+    connect = PhotoImage(file='images/connect.png')
 
     graphLabel = Label(graphWidget, text="STATISTICS")
     graphLabel.config(font=(value.titlefont), bg=value.widgetBackground, fg=value.titleColor)
@@ -45,11 +47,11 @@ class graphwidget(object):
     graphLabelLight.place(x=10, y=50)
 
     if light.getConnection() == True:
-        graphLabelCon = Label(graphWidget, image=openImage, bg=value.widgetBackground)
+        graphLabelCon = Label(graphWidget, image=connect, bg=value.widgetBackground)
         graphLabelCon.pack()
         graphLabelCon.place(x=100, y=50)
     elif light.getConnection() == False:
-        graphLabelCon = Label(graphWidget, image=closeImage, bg=value.widgetBackground)
+        graphLabelCon = Label(graphWidget, image=disconnect, bg=value.widgetBackground)
         graphLabelCon.pack()
         graphLabelCon.place(x=100, y=50)
 
@@ -59,32 +61,38 @@ class graphwidget(object):
     graphLabelTemp.place(x=10,y=70)
 
     if temp.getConnection() == True:
-        graphLabelCon = Label(graphWidget, image=openImage, bg=value.widgetBackground)
+        graphLabelCon = Label(graphWidget, image=connect, bg=value.widgetBackground)
         graphLabelCon.pack()
         graphLabelCon.place(x=100, y=70)
     elif temp.getConnection() == False:
-        graphLabelCon = Label(graphWidget, image=closeImage, bg=value.widgetBackground)
+        graphLabelCon = Label(graphWidget, image=disconnect, bg=value.widgetBackground)
         graphLabelCon.pack()
         graphLabelCon.place(x=100, y=70)
 
-    averagetemp = Label(graphWidget, text="Average temperature")
+    averagetemp = Label(graphWidget, text="Avg temp")
     averagetemp.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
     averagetemp.pack()
     averagetemp.place(x=150, y=30)
 
-
-    averagelight = Label(graphWidget, text="Average light percentage")
-    averagelight.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
-    averagelight.pack()
-    averagelight.place(x=300, y=30)
-
-    averagetempvalue = Label(graphWidget, text=totalLight)
+    averagetempvalue = Label(graphWidget, text="{} °C".format(totalTemp))
     averagetempvalue.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
     averagetempvalue.pack()
-    averagetempvalue.place(x=150, y=70)
+    averagetempvalue.place(x=150, y=50)
+
+
+    averagelight = Label(graphWidget, text="Avg light %")
+    averagelight.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    averagelight.pack()
+    averagelight.place(x=225, y=30)
+
+    averagetempvalue = Label(graphWidget, text="{} %".format(totalLight))
+    averagetempvalue.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    averagetempvalue.pack()
+    averagetempvalue.place(x=225, y=50)
 
 
 def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g1.graphWidget.place(height=150, width=525, x=330, y=410)
 
 g1 = graphwidget
+controller.update()
