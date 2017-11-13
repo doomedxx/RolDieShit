@@ -27,7 +27,7 @@ class rollerwidget(object):
     rollerLabelMode = Label(rollerWidget, text="MODE: Automatic")
     rollerLabelMode.config(font=("DIN",10), bg=widgetBackground, fg=value.titleColor)
     rollerLabelMode.pack()
-    rollerLabelMode.place(x=170, y=4)
+    rollerLabelMode.place(x=170, y=5)
 
     meme = Label(rollerWidget, image=memeImage, bg=widgetBackground)
     meme.pack()

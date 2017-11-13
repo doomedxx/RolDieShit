@@ -45,7 +45,7 @@ widgetList = []
 
 ################# Geeft informatie weer onderaan de frame. #################
 VersionNumber = Label(root)
-VersionNumber.config(text="Version 0.2", font=("DIN-bold", 8), bg="gray15",  fg="white")
+VersionNumber.config(text="Version 0.5", font=("DIN-bold", 8), bg="gray15",  fg="white")
 VersionNumber.place(x=windowWidth - 90, y=windowHeight-25)
 
 Username = Label(root)

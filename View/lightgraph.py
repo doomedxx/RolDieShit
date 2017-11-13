@@ -39,7 +39,7 @@ class graphwidget3(object):
     toolbar = NavigationToolbar2TkAgg(canvas, graphWidget3Tool)
     toolbar.update()
 
-    graphlabel31 = Label(graphWidget3, text="| LIGHT LEVELS")
+    graphlabel31 = Label(graphWidget3, text="LIGHT LEVELS")
     graphlabel31.config(font=(value.titlefont), bg="#65686d", fg="white")
     graphlabel31.place(x=60, y=-2)
 
