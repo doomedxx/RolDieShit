@@ -24,8 +24,8 @@ class rollerwidget(object):
     rollerLabel.pack()
     rollerLabel.place(x=5, y=1)
 
-    rollerLabelMode = Label(rollerWidget, text="STATUS: Automatic")
-    rollerLabelMode.config(font=(value.font,10), bg=widgetBackground, fg=value.titleColor)
+    rollerLabelMode = Label(rollerWidget, text="MODE: Automatic")
+    rollerLabelMode.config(font=("DIN",10), bg=widgetBackground, fg=value.titleColor)
     rollerLabelMode.pack()
     rollerLabelMode.place(x=170, y=4)
 
