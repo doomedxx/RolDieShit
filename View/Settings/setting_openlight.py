@@ -24,16 +24,16 @@ class openlightsetting(object):
 
         self.lightValue = Label(self.openlightWidget)
         self.lightValue.config(text=self.maxlight, font=value.settingInformationFont, bg=value.settingsBackground, fg=value.settingtitleColor, anchor="c")
-        self.lightValue.place(x=35, y=value.settingHeight - 95, width = 75)
+        self.lightValue.place(x=35, y=value.settingHeight - 115, width = 75)
 
         self.lightIncrement = Button(self.openlightWidget)
         self.lightIncrement.config(text="+", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
-        self.lightIncrement.place(x=118, y=value.settingHeight - 80)
+        self.lightIncrement.place(x=118, y=value.settingHeight - 100)
         self.lightIncrement.bind("<Button-1>", controller.increaselightOpenGo)
 
         self.lightDecrease = Button(self.openlightWidget)
         self.lightDecrease.config(text="-", font=("DIN-bold", 13), bg=value.settingButtonColor, fg=value.settingtitleColor, height=-10, width=1)
-        self.lightDecrease.place(x=12, y=value.settingHeight - 80)
+        self.lightDecrease.place(x=12, y=value.settingHeight - 100)
         self.lightDecrease.bind("<Button-1>", controller.decreaselightOpenGo)
 
         self.lightsettingTip = Label(self.openlightWidget)

@@ -18,12 +18,12 @@ except:
 
 def updateTick():
     global lightInput
-    f.root.after(1000, updateTick)
+    f.root.after(200, updateTick)
     f.root.after(1000, checkMode)
     try:
         value = ser.read()
-        min = 25                #min light value
-        max = 60                #max light value
+        min = 30                #min light value
+        max = 50               #max light value
         if value:
             lightNum = int.from_bytes(value, byteorder='little')
             #print(lightNum)

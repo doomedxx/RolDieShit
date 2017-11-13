@@ -22,19 +22,19 @@ class controlwidget(object):
     controlButtonCloseAll = Button(controlWidget, text="CLOSE ALL")
     controlButtonCloseAll.config(font=(value.font, 12), bg=color, fg=value.indicatorColor,borderwidth= 1, relief="raised")
     controlButtonCloseAll.pack()
-    controlButtonCloseAll.place(height=20, width=110,x=5, y=30)
+    controlButtonCloseAll.place(height=20, width=110,x=5, y=32)
     controlButtonCloseAll.bind("<Button-1>",lambda event: controller.All("Open"))
 
     controlButtonOpenAll = Button(controlWidget, text="OPEN ALL")
     controlButtonOpenAll.config(font=(value.font, 12), bg=color, fg=value.indicatorColor,borderwidth= 1, relief="raised")
     controlButtonOpenAll.pack()
-    controlButtonOpenAll.place(height=20, width=110,x=5, y=55)
+    controlButtonOpenAll.place(height=20, width=110,x=5, y=53)
     controlButtonOpenAll.bind("<Button-1>",lambda event: controller.All("Closed"))
 
     controlButtonMode = Button(controlWidget, text="AUTOMATIC")
     controlButtonMode.config(font=(value.font, 12), bg=color, fg=value.indicatorColor, borderwidth=1,relief="raised")
     controlButtonMode.pack()
-    controlButtonMode.place(height=20, width=110, x=5, y=80)
+    controlButtonMode.place(height=20, width=110, x=5, y=74)
     controlButtonMode.bind("<Button-1>", controller.Mode)
 
     controlWidget.pack(side=LEFT)
