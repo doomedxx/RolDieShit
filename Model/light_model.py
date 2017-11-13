@@ -2,7 +2,7 @@ from View import light as view
 from View import lightgraph as graph
 import Frame.mainframe as f
 from serial import *
-from Model.roller_model import checkTime as checkTime
+from Model.roller_model import checkMode as checkMode
 lightInput = 0
 
 try:
@@ -19,7 +19,7 @@ except:
 def updateTick():
     global lightInput
     f.root.after(1000, updateTick)
-    f.root.after(1000, checkTime)
+    f.root.after(1000, checkMode)
     try:
         value = ser.read()
         min = 25                #min light value
