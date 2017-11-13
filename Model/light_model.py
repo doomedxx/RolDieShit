@@ -11,6 +11,7 @@ lightInput = 0
 connection = True
 counter = 50
 count = 1
+list_of_light = []
 
 try:
     ser = Serial(
@@ -34,7 +35,6 @@ def totalLight():
     #graph1.g1.averagetempvalue.config(text="{}%".format(average))
     return average
 
-light = 50 # Voor simulatie doeleinde
 def updateTick():
     global light
     global lightInput
@@ -56,30 +56,28 @@ def updateTick():
             counter += lightInput
             count += 1
             #print(lightToPercentage)
+            if lightInput not in list_of_light:
+                list_of_light.append(lightInput)
             view.l1.lightLabelCount.config(text="{}%".format(lightToPercentage))
-            average = round(counter / count, 1)
-            graph1.g1.averagetempvalue.config(text="{}%".format(average))
             checkPreset(lightToPercentage)
             updateGraph(lightToPercentage)
             getLight()
             totalLight()
     except:
-        rand = randint(0,1)
-        if rand == 1:
-            light+=1
-        elif rand == 0:
-            light-=1
-        view.l1.lightLabelCount.config(text=light)
-        updateGraph(light)
+        view.l1.lightLabelCount.config(text="N/A")
         view.l1.lightLabelPreset.config(text="[Restart]")
 
 def getLight():
-    #print(lightInput)
     return lightInput
 
 def getLightSimu():
     return light
 
+def maxLight():
+    return max(list_of_light)
+
+def minLight():
+    return min(list_of_light)
 
 def checkPreset(light):
     if light >= 0 and light <= 20:
