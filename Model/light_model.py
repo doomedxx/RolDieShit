@@ -11,12 +11,12 @@ lightInput = 0
 connection = True
 counter = 50
 count = 1
-list_of_light = []
+list_of_light = [50]
 
 ## Checks serial connection
 try:
     ser = Serial(
-        port='COM3',
+        port='COM5',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
@@ -32,8 +32,9 @@ def getConnection(): ## Returns the value of connection
     return connection
 
 def totalLight(): ## Returns the average temperature
-    #from View import statswidget as stats
     average = round(counter/count,1)
+    integer = int(average)
+    #print(integer)
     #stats.g1.averagetempvalue.config(text="{}%".format(average))
     return average
 
@@ -42,13 +43,13 @@ def updateTick(): ## Updates light value
     global lightInput
     global counter
     global count
-    f.root.after(500, updateTick)
+    f.root.after(200, updateTick)
     f.root.after(1000, checkMode)
     f.root.after(1000, printTemp)
     try:
         value = ser.read()
 
-        min = 25                #min light value
+        min = 35                #min light value
         max = 60                #max light value
         if value: ## Checks if value is recieved and converts it to decimal number
             lightNum = int.from_bytes(value, byteorder='little')
@@ -76,9 +77,11 @@ def getLightSimu():
     return light
 
 def maxLight():
+    f.root.after(1000,maxLight)
     return max(list_of_light)
 
 def minLight():
+    f.root.after(1000, minLight)
     return min(list_of_light)
 
 def checkPreset(light):

@@ -18,6 +18,9 @@ class graphwidget(object):
     widgetWidth = 300
     totalLight = light.totalLight()
     totalTemp = temp.totalTemp()
+    maxLight = light.maxLight()
+    minLight = light.minLight()
+
 
     disconnect = PhotoImage(file='images/disconnect.png')
     connect = PhotoImage(file='images/connect.png')
@@ -105,7 +108,7 @@ class graphwidget(object):
     maxlight.pack()
     maxlight.place(x=300, y=30)
 
-    maxlightval = Label(graphWidget, text="85%")
+    maxlightval = Label(graphWidget, text="{}%".format(maxLight))
     maxlightval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
     maxlightval.pack()
     maxlightval.place(x=300, y=50)
@@ -115,7 +118,7 @@ class graphwidget(object):
     minlight.pack()
     minlight.place(x=300, y=70)
 
-    minlightval = Label(graphWidget, text="32%")
+    minlightval = Label(graphWidget, text="{}%".format(minLight))
     minlightval.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
     minlightval.pack()
     minlightval.place(x=300, y=90)
@@ -144,5 +147,28 @@ class graphwidget(object):
 def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g1.graphWidget.place(height=150, width=525, x=330, y=410)
 
+def updatedingen():
+    global totalLight
+    global totalTemp
+    global maxLight
+    global minLight
+    global minTemp
+    global maxTemp
+
+    totalLight = light.totalLight()
+    g1.averagetempvalue.config(text=totalLight)
+    maxLight = light.maxLight()
+    g1.maxlightval.config(text=maxLight)
+    minLight = light.minLight()
+    g1.minlightval.config(text=minLight)
+
+    totalTemp = temp.totalTemp()
+    g1.averagetempvalue.config(text=totalTemp)
+    minTemp = temp.minTemp()
+    g1.mintempval.config(text=minTemp)
+    maxTemp = temp.maxTemp()
+    g1.maxtempval.config(text=maxTemp)
+    mainframe.root.after(500, updatedingen)
 g1 = graphwidget
 controller.update()
+updatedingen()

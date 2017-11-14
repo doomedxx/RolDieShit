@@ -9,13 +9,13 @@ tempInput = 0
 connection = True
 counter = 21
 count = 1
-list_of_temps = []
+list_of_temps = [22]
 temp = 22
 
 ## Checks if the Arduino is connected
 try:
     ser = Serial(
-        port='COM4',
+        port='COM7',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
@@ -32,6 +32,8 @@ def getConnection(): ## Returns if Temp sensor is connected or not
 
 def totalTemp(): ##Returns the average temp of all temps measured
     average = round(counter/count,1)
+    f.root.after(1000,totalTemp)
+    #print(average)
     return average
 
 def printTemp(): ## Reads the input from arduino and converts it to a decimal number, added some testing code to animate temperature changes
@@ -53,7 +55,7 @@ def printTemp(): ## Reads the input from arduino and converts it to a decimal nu
                 list_of_temps.append(tempNum)
             updateGraph(tempNum)
             getTemp()
-        else:
+        '''else:
             rand = randint(0,1)
             if rand == 1:
                 temp += 0.5
@@ -61,21 +63,26 @@ def printTemp(): ## Reads the input from arduino and converts it to a decimal nu
                 temp -= 0.5
             sleep(2)
             tempRound = int(round(temp,0))
-            #view.t1.tempLabelCount.config(text="  {}C".format(tempRound))
+            counter += temp
+            count += 1
+            view.t1.tempLabelCount.config(text="  {}C".format(tempRound))
             if tempRound not in list_of_temps:
                 list_of_temps.append(tempRound)
             updateGraph(temp)
-            getTemp()
+            getTemp()'''
     except:
         view.t1.tempLabelCount.config(text="N/A")
 
 def getTemp(): ## Return current temperature
+    f.root.after(1000,getTemp)
     return tempInput
 
 def maxTemp():  ## Returns the maximum temperature measured
+    f.root.after(1000,maxTemp)
     return max(list_of_temps)
 
 def minTemp():  ## Retruns the minimum temperature measured
+    f.root.after(1000,minTemp)
     return min(list_of_temps)
 
 averageList = [0,0,0,0,0,0,0,0,0,0,0]

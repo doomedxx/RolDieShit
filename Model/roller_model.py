@@ -33,7 +33,7 @@ def checkLight(): ## Checks the light value and executes a fitting function when
     temperature = temp.getTemp()
     mintemp = mintemp.getMinTemp()
 
-    if lightInput < closeLight and isMoving == False and temperature > mintemp:
+    if lightInput < closeLight and isMoving == False or temperature > mintemp:
         All("Closed")
     elif lightInput > openLight and isMoving == False:
         All("Open")

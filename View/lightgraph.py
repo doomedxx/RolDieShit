@@ -12,11 +12,11 @@ import View.widgetValues as value
 
 class graphwidget3(object):
     graphWidget3 = Frame(mainframe.root, relief=SUNKEN)
-
+    graphWidget3Tool = Frame(mainframe.root, relief=SUNKEN)
     f = plt.figure(figsize=(10,4), dpi=85, facecolor='#65686d', edgecolor="white")
     ax = f.add_subplot(1,1,1)
-    x = [0,0,0,0,0,0,0,0,0,0,0]
-    y = [0,0,0,0,0,0,0,0,0,0,0]
+    x = [0]
+    y = [0]
     line, = ax.plot(x,y, 'green')
     line2, = ax.plot(x,y, 'gray')
 
@@ -30,6 +30,16 @@ class graphwidget3(object):
 
     graphWidget3.place(height=220, width=525, x=330, y=180)
     graphWidget3.config(bg=value.widgetBackground,borderwidth= value.borderWidth, relief=value.relief)
+
+
+    graphWidget3Tool.config(bg=value.widgetBackground,borderwidth= value.borderWidth, relief=value.relief)
+    graphWidget3Tool.bind("<Enter>", controller.getTools)
+
+    graphWidget3.bind("<Enter>", controller.getTools)
+    graphWidget3.bind("<Leave>", controller.releaseTools)
+
+    toolbar = NavigationToolbar2TkAgg(canvas, graphWidget3Tool)
+    toolbar.update()
 
     graphlabel31 = Label(graphWidget3, text="LIGHT LEVELS")
     graphlabel31.config(font=(value.titlefont), bg="#65686d", fg="white")
