@@ -14,7 +14,7 @@ temp = 22
 
 try:
     ser = Serial(
-        port='COM4',
+        port='COM7',
         baudrate=19200,
         parity=PARITY_NONE,
         stopbits=STOPBITS_ONE,
@@ -38,31 +38,17 @@ def printTemp():
     global counter
     global count
     try:
-        value = ser.read()
+        value = ser.readline()
+        tempNum = int.from_bytes(value,byteorder='little')
         if value:
-            tempNum = int.from_bytes(value, byteorder='little')
-            tempInput = tempNum
+            print(tempNum)
+            ser.write([0x01])
             counter += tempInput
             count +=1
             view.t1.tempLabelCount.config(text="  {}C".format(tempNum))
-            if tempInput not in list_of_temps:
-                list_of_temps.append(tempInput)
+            if tempNum not in list_of_temps:
+                list_of_temps.append(tempNum)
             getTemp()
-        else:
-            global temp
-            rand = randint(0, 1)
-            if temp < 20 or temp > 23:
-                pass
-            else:
-                if rand == 1:
-                    temp += 0.5
-                if rand == 0:
-                    temp -= 0.5
-                    updateGraph(temp)
-                sleep(2)
-            tempval = int(round(temp, 0))
-            list_of_temps.append(tempval)
-            view.t1.tempLabelCount.config(text="  {}C".format(int(round(temp, 0))))
     except:
         view.t1.tempLabelCount.config(text="N/A")
 
