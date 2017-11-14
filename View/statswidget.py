@@ -36,7 +36,7 @@ class graphwidget(object):
     graphLabel1.pack()
     graphLabel1.place(x=10, y=30)
 
-    graphLabel2 = Label(graphWidget, text="Connected Arduinos")
+    graphLabel2 = Label(graphWidget, text="Connected Sensors")
     graphLabel2.config(font=(value.font,10), bg=value.widgetBackground, fg="white")
     graphLabel2.pack()
     graphLabel2.place(x=10, y=30)

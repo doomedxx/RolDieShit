@@ -26,3 +26,6 @@ def decreaseTemp():
 
 def setWarning(warning):
     min.min1.opentempWarning.config(text=warning)
+
+def getMinTemp():
+    return temp

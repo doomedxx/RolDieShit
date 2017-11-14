@@ -4,20 +4,16 @@ from Frame import mainframe as mainframe
 from View import control as c
 rollucks = {1:"Open", 2:"Closed", 3:"Open"}
 
-#lightInput = light.getLight()
-closeLight = 30     #lightClose.getCloseLight()
-openLight = 70      #lightOpen.getOpenLight()
-
 
 isEnabled = True
-def checkMode():
+def checkMode(): ## Checks value of isEnabled, nothing will happen when this is False
     global isEnabled
     if isEnabled == True:
         checkTime()
 
 
 
-def checkTime():
+def checkTime(): ## Checks if the current time is within the opening hours of the office
     from Model.Settings import office_model as office
     openTime = office.getOpenTime()
     closeTime = office.getCloseTime()
@@ -27,19 +23,23 @@ def checkTime():
 
 def checkLight(): ## Checks the light value and executes a fitting function when a certain threshold is met
     from Model import light_model as light
+    from Model import temp_model as temp
     from Model.Settings import light_open_model as lightOpen
     from Model.Settings import light_close_model as lightClose
+    from Model.Settings import mintemp_model as mintemp
     closeLight = lightClose.getCloseLight()
     openLight = lightOpen.getOpenLight()
     lightInput = light.getLight()
+    temperature = temp.getTemp()
+    mintemp = mintemp.getMinTemp()
 
-    if lightInput < closeLight and isMoving == False:
+    if lightInput < closeLight and isMoving == False and temperature > mintemp:
         All("Closed")
     elif lightInput > openLight and isMoving == False:
         All("Open")
 
 isMoving = False
-def close(rollID):
+def close(rollID):  ## Closes Rolluck
     global isMoving
     isMoving = False
     eval("view.r1.rollerStatus" + str(rollID) + ".config(image=view.r1.closeImage)")
@@ -47,7 +47,7 @@ def close(rollID):
     eval("view.r1.roller" + str(rollID) + "Toggle.config(state=NORMAL)")
     rollucks[rollID] = "Closed"
 
-def open(rollID):
+def open(rollID): ## Opens Rolluck
     global isMoving
     isMoving = False
     eval("view.r1.rollerLabel" + str(rollID) + "Status.config" + "(text='Status: Open')")
@@ -71,7 +71,7 @@ def rollToggleStart(rolluck):
         eval("view.r1.roller" + str(rolluck) + "Toggle.config(state=DISABLED)")
         mainframe.root.after(3000, open, rolluck)
 
-def Mode():
+def Mode(): ## Checks the value of isEnabled to change between automatic and manual
     global isEnabled
     if isEnabled == False:
         isEnabled = True

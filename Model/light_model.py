@@ -13,6 +13,7 @@ counter = 50
 count = 1
 list_of_light = []
 
+## Checks serial connection
 try:
     ser = Serial(
         port='COM3',
@@ -27,15 +28,16 @@ except:
     print("Light Disconnected")
     connection = False
 
-def getConnection():
+def getConnection(): ## Returns the value of connection
     return connection
 
-def totalLight():
+def totalLight(): ## Returns the average temperature
+    #from View import statswidget as stats
     average = round(counter/count,1)
     #stats.g1.averagetempvalue.config(text="{}%".format(average))
     return average
 
-def updateTick():
+def updateTick(): ## Updates light value
     global light
     global lightInput
     global counter
@@ -48,7 +50,7 @@ def updateTick():
 
         min = 25                #min light value
         max = 60                #max light value
-        if value:
+        if value: ## Checks if value is recieved and converts it to decimal number
             lightNum = int.from_bytes(value, byteorder='little')
             #print(lightNum)
             lightToPercentage = round((lightNum - min) * 100 / (max - min))
