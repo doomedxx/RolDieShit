@@ -33,9 +33,6 @@ def getConnection(): ## Returns the value of connection
 
 def totalLight(): ## Returns the average temperature
     average = round(counter/count,1)
-    integer = int(average)
-    #print(integer)
-    #stats.g1.averagetempvalue.config(text="{}%".format(average))
     return average
 
 def updateTick(): ## Updates light value
@@ -70,21 +67,21 @@ def updateTick(): ## Updates light value
         view.l1.lightLabelCount.config(text="N/A")
         view.l1.lightLabelPreset.config(text="[Restart]")
 
-def getLight():
+def getLight(): ## returns current light percentage
     return lightInput
 
 def getLightSimu():
     return light
 
-def maxLight():
+def maxLight(): ## returns maximum light percentage measured
     f.root.after(1000,maxLight)
     return max(list_of_light)
 
-def minLight():
+def minLight(): ##returns minimum light percentage measured
     f.root.after(1000, minLight)
     return min(list_of_light)
 
-def checkPreset(light):
+def checkPreset(light): ## sets a preset based on the current light percentage
     if light >= 0 and light <= 20:
         view.l1.lightLabelPreset.config(text="[Very Dark]")
     elif light >= 20 and light < 40:
@@ -101,7 +98,7 @@ def checkPreset(light):
 averageList = [0,0,0,0,0,0,0,0,0,0,0]
 cycle = 0
 SetX = 100
-def updateGraph(light):
+def updateGraph(light): ##Updates the graph for light input
     global averageList
     global SetX
     global cycle

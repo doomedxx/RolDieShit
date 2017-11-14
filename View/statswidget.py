@@ -98,10 +98,10 @@ class graphwidget(object):
     averagelight.pack()
     averagelight.place(x=225, y=30)
 
-    averagetempvalue = Label(graphWidget, text="{} %".format(totalLight))
-    averagetempvalue.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
-    averagetempvalue.pack()
-    averagetempvalue.place(x=225, y=50)
+    averagelightvalue = Label(graphWidget, text="{} %".format(totalLight))
+    averagelightvalue.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
+    averagelightvalue.pack()
+    averagelightvalue.place(x=225, y=50)
 
     maxlight = Label(graphWidget, text="Max light %")
     maxlight.config(font=(value.font, 10), bg=value.widgetBackground, fg="white")
@@ -156,7 +156,7 @@ def updatedingen():
     global maxTemp
 
     totalLight = light.totalLight()
-    g1.averagetempvalue.config(text=totalLight)
+    g1.averagelightvalue.config(text=totalLight)
     maxLight = light.maxLight()
     g1.maxlightval.config(text=maxLight)
     minLight = light.minLight()
