@@ -5,7 +5,7 @@ from Controller import control_controller as controller
 import View.widgetValues as value
 
 
-class controlwidget(object):
+class controlwidget(object): ##Creates block where you can switch between automatic/manual mode, and close/open all rollucks
     controlWidgetPosX = 655
     controlWidgetPosY = 70
     color = "RoyalBlue"

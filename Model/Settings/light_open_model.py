@@ -3,7 +3,7 @@ from View.Settings import setting_openlight as open
 
 light = 30
 
-def increaseLightOpen():
+def increaseLightOpen(): ## Increases the value of when the rollucks should open depening on Light value
     global light
     from Model.Settings.light_close_model import getLightValue
     if light >= getLightValue()-5:
@@ -17,7 +17,7 @@ def increaseLightOpen():
         open.open1.lightIncrement.config(state='disabled')
     open.open1.setlight(light)
 
-def decreaseLightOpen():
+def decreaseLightOpen(): ## Decreases the value of when the rollucks should open depening on Light value
     global light
     if light >= 5 and light <= 100:
         setWarning("")
@@ -32,12 +32,12 @@ def decreaseLightOpen():
 def setWarning(warning):
     open.open1.openlightWarning.config(text=warning, fg="white")
 
-def getLightValue():
+def getLightValue(): ##Returns the value of light
     global light
     return light
 
 def onLeaveScript():
     close.close1.setTooltip("")
 
-def getOpenLight():
+def getOpenLight(): ##Returns the value of light, kan weg??
     return light

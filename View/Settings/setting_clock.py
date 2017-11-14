@@ -6,7 +6,7 @@ import View.widgetValues as value
 
 class clocksettingwidget(object):
     mainframe.widgetList.append("clocksetting")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for 12/24 hour clock
         self.clocksettingwidgetPosX = 655
         self.clocksettingwidgetPosY = 320
         self.clocksettingwidget = Frame(mainframe.root, relief=SUNKEN)

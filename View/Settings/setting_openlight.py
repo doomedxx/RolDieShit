@@ -8,7 +8,7 @@ import View.widgetValues as value
 class openlightsetting(object):
 
     mainframe.widgetList.append("openlight")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for the light percentage where the rollucks shoul open
         self.maxlight = 30
         self.openlightWidgetPosX = 655
         self.openlightWidgetPosY = 320

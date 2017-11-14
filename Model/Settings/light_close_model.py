@@ -14,7 +14,7 @@ def increaseLightClose(): ## Increases the value of when the rollucks should clo
         close.close1.lightIncrement.config(state='disabled')
     close.close1.setlight(light)
 
-def decreaseLightClose(): # Decreases the value of when the rollucks should close depening on Light value
+def decreaseLightClose(): ## Decreases the value of when the rollucks should close depening on Light value
     global light
     from Model.Settings.light_open_model import getLightValue as getCloseValue
     if light <= getCloseValue()+5:
@@ -29,7 +29,7 @@ def decreaseLightClose(): # Decreases the value of when the rollucks should clos
 
     close.close1.setlight(light)
 
-def getLightValue():
+def getLightValue(): ## Returns the value of light
     global light
     return light
 

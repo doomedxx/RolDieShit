@@ -12,7 +12,7 @@ from Model import temp_model as temp
 from Controller import light_controller as controller
 
 
-class graphwidget(object):
+class graphwidget(object): ## Creates statistics from the current session
     graphWidget = Frame(mainframe.root, relief=SUNKEN)
     widgetHeight = 150
     widgetWidth = 300
@@ -49,6 +49,7 @@ class graphwidget(object):
     graphLabelLight.pack()
     graphLabelLight.place(x=10, y=50)
 
+    ## Checks if light sensor is connected, and present appropriate image
     if light.getConnection() == True:
         graphLabelCon = Label(graphWidget, image=connect, bg=value.widgetBackground)
         graphLabelCon.pack()
@@ -63,6 +64,7 @@ class graphwidget(object):
     graphLabelTemp.pack()
     graphLabelTemp.place(x=10,y=80)
 
+    ## Checks if temperature sensor is connected, and present appropriate image
     if temp.getConnection() == True:
         graphLabelCon = Label(graphWidget, image=connect, bg=value.widgetBackground)
         graphLabelCon.pack()
@@ -147,7 +149,7 @@ class graphwidget(object):
 def replace(): ## Wanneer er terug word geschakeld van Settings naar View, word de widget opnieuw geplaatst
     g1.graphWidget.place(height=150, width=525, x=330, y=410)
 
-def updatedingen():
+def updatedingen(): ## Updates the values in this statistics
     global totalLight
     global totalTemp
     global maxLight

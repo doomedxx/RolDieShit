@@ -5,7 +5,7 @@ import View.widgetValues as value
 from Controller import light_controller as controller
 
 
-class lightWidget(object):
+class lightWidget(object): ## Block to present the current light percentage
     mainframe.widgetList.append("Light Widget")
     lightWidget = Frame(mainframe.root, relief=SUNKEN)
     lightWidgetPosX = 235

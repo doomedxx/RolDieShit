@@ -7,7 +7,7 @@ from Controller.clock_controller import updateClock as clock
 
 class clockwidget(tk.Tk):
     mainframe.widgetList.append("Clock")
-    def __init__(self):
+    def __init__(self): ## Create clock on view
         self.clockWidgetPosX = 445
         self.clockWidgetPosY = 70
         self.color = "royalblue3"

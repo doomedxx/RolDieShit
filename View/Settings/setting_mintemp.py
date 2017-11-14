@@ -7,7 +7,7 @@ import View.widgetValues as value
 
 class opentempsetting(object):
     mainframe.widgetList.append("opentemp")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for changing the temp for when the rollucks should close
         self.opentemp = 27
         self.opentempsettingPosX = 550
         self.opentempsettingPosY = 320

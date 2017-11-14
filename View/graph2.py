@@ -8,7 +8,7 @@ import Frame.mainframe as mainframe
 import View.widgetValues as value
 
 
-class graphwidget2(object):
+class graphwidget2(object): ##Graph for temp values
     graphWidget2 = Frame(mainframe.root, relief=SUNKEN)
 
     graphWidget2.pack(side=LEFT)

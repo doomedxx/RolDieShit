@@ -4,7 +4,7 @@ import Frame.mainframe as mainframe
 import View.widgetValues as value
 from Controller import temp_controller as controller
 
-class tempwidget:
+class tempwidget: ## Creates the block where current temperature is shown
     mainframe.widgetList.append("Temperature")
     tempWidgetPosX = 25
     tempWidgetPosY = 70

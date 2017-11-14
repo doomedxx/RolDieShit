@@ -11,7 +11,7 @@ import View.widgetValues as value
 class lightgraphSetting(object):
 
     mainframe.widgetList.append("closetemp")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for changing X/Y axles for the light graph
         self.lightGraphSettingPosY = 70
         self.lightGraphSetting = Frame(mainframe.root, relief=SUNKEN)
 

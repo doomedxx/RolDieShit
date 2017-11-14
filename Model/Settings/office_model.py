@@ -90,7 +90,7 @@ def decreaseCloseTimeScript():
         time = "{}:{}".format(closehour, closeminute)
     office.office1.officeCloseValue.config(text=time)
 
-def getOpenTime():
+def getOpenTime(): ##Checks if current time is after opening time
     from Model import clock_model as clock
     hour = int(clock.getHour())
     minute = int(clock.getMinute())
@@ -107,7 +107,7 @@ def getOpenTime():
                             return True
 
 
-def getCloseTime():
+def getCloseTime(): ## Checks if current time is before closing time
     from Model import clock_model as clock
     hour = int(clock.getHour())
     minute = int(clock.getMinute())

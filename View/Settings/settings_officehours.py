@@ -8,7 +8,7 @@ import View.widgetValues as value
 class officehourssetting(object):
 
     mainframe.widgetList.append("closetemp")
-    def __init__(self):
+    def __init__(self): ## Change opening hours of the office
 
         self.officetemp = 23
         self.officesettingPosX = 555

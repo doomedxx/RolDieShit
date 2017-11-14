@@ -12,7 +12,7 @@ import View.widgetValues as value
 class tempGraphSetting(object):
 
     mainframe.widgetList.append("closetemp")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for changing X/Y axles for the temp graph
         self.tempGraphSettingPosY = 320
         self.tempGraphSetting = Frame(mainframe.root, relief=SUNKEN)
 

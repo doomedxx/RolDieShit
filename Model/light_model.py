@@ -45,7 +45,6 @@ def updateTick(): ## Updates light value
     f.root.after(1000, printTemp)
     try:
         value = ser.read()
-
         min = 35                #min light value
         max = 60                #max light value
         if value: ## Checks if value is recieved and converts it to decimal number

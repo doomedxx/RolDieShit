@@ -5,7 +5,7 @@ import Frame.mainframe as mainframe
 import View.widgetValues as value
 
 
-class rollerwidget(object):
+class rollerwidget(object): ## Creates block to manual open/close every single rolluck, doesnt work when set to automatic mode
     widgetHeight = 150
     widgetWidth = 300
     widgetXPos=25
@@ -29,6 +29,7 @@ class rollerwidget(object):
     rollerLabelMode.pack()
     rollerLabelMode.place(x=170, y=5)
 
+    ## Hanze meme easteregg
     meme = Label(rollerWidget, image=memeImage, bg=widgetBackground)
     meme.pack()
     meme.place(x=150, y=50)

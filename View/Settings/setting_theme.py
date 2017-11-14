@@ -7,7 +7,7 @@ import View.widgetValues as value
 
 class themewidget(object):
     mainframe.widgetList.append("theme")
-    def __init__(self):
+    def __init__(self): ## Settings for light/dark theme
         self.themeWidgetPosX = 655
         self.themeWidgetPosY = 70
         self.themeWidget = Frame(mainframe.root, relief=SUNKEN)

@@ -33,7 +33,6 @@ def getConnection(): ## Returns if Temp sensor is connected or not
 def totalTemp(): ##Returns the average temp of all temps measured
     average = round(counter/count,1)
     f.root.after(1000,totalTemp)
-    #print(average)
     return average
 
 def printTemp(): ## Reads the input from arduino and converts it to a decimal number, added some testing code to animate temperature changes
@@ -45,7 +44,6 @@ def printTemp(): ## Reads the input from arduino and converts it to a decimal nu
         value = ser.readline()
         tempNum = int.from_bytes(value,byteorder='little')
         if value:
-            #print(tempNum)
             ser.write([0x01])
             counter += tempNum
             tempInput = tempNum
@@ -55,7 +53,7 @@ def printTemp(): ## Reads the input from arduino and converts it to a decimal nu
                 list_of_temps.append(tempNum)
             updateGraph(tempNum)
             getTemp()
-        '''else:
+        '''else: ## for checking with changing temperatures
             rand = randint(0,1)
             if rand == 1:
                 temp += 0.5

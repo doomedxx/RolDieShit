@@ -8,7 +8,7 @@ import View.widgetValues as value
 class closelightsetting(object):
 
     mainframe.widgetList.append("closelight")
-    def __init__(self):
+    def __init__(self): ## Creates the settings for close light
         self.maxlight = 70
         self.closelightWidgetPosX = 655
         self.closelightWidgetPosY = 70

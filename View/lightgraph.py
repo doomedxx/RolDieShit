@@ -10,7 +10,7 @@ import Frame.mainframe as mainframe
 import View.widgetValues as value
 
 
-class graphwidget3(object):
+class graphwidget3(object): ## Creates the graph for the light values
     graphWidget3 = Frame(mainframe.root, relief=SUNKEN)
     graphWidget3Tool = Frame(mainframe.root, relief=SUNKEN)
     f = plt.figure(figsize=(10,4), dpi=85, facecolor='#65686d', edgecolor="white")

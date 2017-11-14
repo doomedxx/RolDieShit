@@ -6,7 +6,7 @@ import View.widgetValues as value
 
 
 class widgetholder:
-    def __init__(self):
+    def __init__(self): ##Top bar
         self.selectedbutton = 495
 
         self.widgetHolder = mainframe.Frame(mainframe.root, relief=SUNKEN)

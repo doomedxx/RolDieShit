@@ -15,13 +15,13 @@ def setTime(): ## Update de tijd elke seconde (Net als een klok dus.)
     getTime()
 
 
-def getTime():
+def getTime(): ## Returns current time
     return time_string
 
-def getHour():
+def getHour(): ## Returns current Hour
     hour_string = time.strftime('%H')
     return hour_string
 
-def getMinute():
+def getMinute(): ## Returns current Minute
     minute_string = time.strftime('%M')
     return minute_string
